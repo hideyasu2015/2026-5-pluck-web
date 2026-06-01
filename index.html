@@ -584,88 +584,106 @@
   .form-sub {
     font-size: 13px;
     color: var(--ink-soft);
-    margin-bottom: 28px;
-  }
-  .form-tabs {
-    display: flex;
-    border-bottom: 1px solid var(--border);
     margin-bottom: 24px;
-    gap: 0;
   }
-  .form-tab {
-    padding: 10px 20px;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    color: var(--ink-soft);
-    border-bottom: 2px solid transparent;
-    transition: all 0.2s;
-    background: none;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: 0.03em;
-    margin-bottom: -1px;
+
+  /* ── Form Fields ── */
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
   }
-  .form-tab.active {
-    color: var(--green-deep);
-    border-bottom-color: var(--green-deep);
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 16px;
   }
-  .form-panel { display: none; }
-  .form-panel.active { display: block; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-  .form-group { margin-bottom: 14px; }
   .form-group label {
-    display: block;
     font-size: 12px;
     font-weight: 500;
-    color: var(--ink-soft);
-    letter-spacing: 0.06em;
+    color: var(--ink-mid);
+    letter-spacing: 0.05em;
     text-transform: uppercase;
-    margin-bottom: 6px;
+  }
+  .form-group label .req {
+    color: var(--green-mid);
+    margin-left: 2px;
   }
   .form-group input,
   .form-group select,
   .form-group textarea {
-    width: 100%;
-    padding: 10px 14px;
-    border: 1px solid var(--border-mid);
-    border-radius: 2px;
-    background: var(--white);
-    color: var(--ink);
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
-    outline: none;
-    transition: border-color 0.2s;
+    color: var(--ink);
+    background: var(--cream);
+    border: 1px solid var(--border-mid);
+    border-radius: 3px;
+    padding: 10px 12px;
+    width: 100%;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    appearance: none;
     -webkit-appearance: none;
+    outline: none;
+  }
+  .form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a7a42' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+    cursor: pointer;
+  }
+  .form-group textarea {
+    resize: vertical;
+    min-height: 80px;
+    line-height: 1.6;
   }
   .form-group input:focus,
   .form-group select:focus,
-  .form-group textarea:focus { border-color: var(--green-mid); }
-  .form-group textarea { resize: vertical; min-height: 90px; }
-  .form-submit {
+  .form-group textarea:focus {
+    border-color: var(--green-mid);
+    box-shadow: 0 0 0 3px rgba(74,122,66,0.12);
+    background: var(--white);
+  }
+  .form-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .form-radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: var(--ink-mid);
+    text-transform: none;
+    letter-spacing: 0;
+    font-weight: 400;
+    cursor: pointer;
+  }
+  .form-radio-group input[type="radio"] {
+    width: 16px;
+    height: 16px;
+    accent-color: var(--green-deep);
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+  .form-submit-btn {
     width: 100%;
     background: var(--green-deep);
     color: var(--white);
     border: none;
-    padding: 14px;
-    border-radius: 2px;
+    border-radius: 3px;
+    padding: 14px 24px;
     font-family: 'DM Sans', sans-serif;
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.06em;
     cursor: pointer;
-    margin-top: 8px;
     transition: background 0.2s;
+    margin-top: 8px;
   }
-  .form-submit:hover { background: var(--green-mid); }
-  .form-privacy {
-    font-size: 11px;
-    color: var(--ink-soft);
-    text-align: center;
-    margin-top: 12px;
-  }
+  .form-submit-btn:hover { background: var(--green-mid); }
 
   /* ── Footer ── */
   footer {
@@ -693,19 +711,6 @@
     height: 2px;
     background: linear-gradient(90deg, transparent, var(--green-mid), var(--green-light), var(--green-mid), transparent);
     opacity: 0.3;
-  }
-
-  /* ── Success banner ── */
-  .success-banner {
-    display: none;
-    background: var(--green-pale);
-    border: 1px solid var(--green-light);
-    border-radius: 4px;
-    padding: 14px 18px;
-    font-size: 14px;
-    color: var(--green-deep);
-    margin-top: 14px;
-    text-align: center;
   }
 
   /* ── Responsive ── */
@@ -1103,126 +1108,105 @@
 
     <div class="form-card">
       <p class="form-title">Send an Inquiry</p>
-      <p class="form-sub">Select the type of inquiry below and fill in the details.</p>
+      <p class="form-sub">Fill in the form below — our export team responds within 24 hours.</p>
 
-      <div class="form-tabs">
-        <button class="form-tab active" onclick="switchTab('sample')">Sample Request</button>
-        <button class="form-tab" onclick="switchTab('inquiry')">General Inquiry</button>
-      </div>
-
-      <!-- Sample Request -->
-      <div class="form-panel active" id="panel-sample">
+      <form
+        action="https://docs.google.com/forms/d/e/1FAIpQLSczGT8wjG64eyI41nftuJ_egyLOpUeSCFYx73nRVQQuFkJwXA/formResponse"
+        method="POST"
+        target="_blank"
+      >
         <div class="form-row">
           <div class="form-group">
-            <label>First Name *</label>
-            <input type="text" placeholder="Sarah">
+            <label for="f-name">Your Name</label>
+            <input type="text" id="f-name" name="entry.452693008" placeholder="Jane Smith">
           </div>
           <div class="form-group">
-            <label>Last Name *</label>
-            <input type="text" placeholder="Johnson">
+            <label for="f-email">Email Address <span class="req">*</span></label>
+            <input type="email" id="f-email" name="entry.1079146583" placeholder="jane@company.com" required>
           </div>
         </div>
-        <div class="form-group">
-          <label>Company *</label>
-          <input type="text" placeholder="Your company name">
-        </div>
+
         <div class="form-row">
           <div class="form-group">
-            <label>Email *</label>
-            <input type="email" placeholder="you@company.com">
-          </div>
-          <div class="form-group">
-            <label>Country *</label>
-            <select>
-              <option value="">Select country</option>
+            <label for="f-country">Country / Region</label>
+            <select id="f-country" name="entry.523120424">
+              <option value="">— Select —</option>
               <option>United States</option>
+              <option>Canada</option>
               <option>United Kingdom</option>
               <option>Australia</option>
-              <option>Canada</option>
+              <option>India</option>
+              <option>Japan</option>
               <option>Germany</option>
-              <option>France</option>
-              <option>Netherlands</option>
-              <option>Singapore</option>
-              <option>UAE</option>
-              <option>South Korea</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="f-biz">Business Type</label>
+            <select id="f-biz" name="entry.1724985053">
+              <option value="">— Select —</option>
+              <option>Manufacturer/Producer</option>
+              <option>Distributor/Wholesaler</option>
+              <option>Retailer/E-commerce</option>
+              <option>Research &amp; Development</option>
+              <option>Academic/Education</option>
+              <option>Individual/Personal Use</option>
               <option>Other</option>
             </select>
           </div>
         </div>
-        <div class="form-group">
-          <label>Business Type *</label>
-          <select>
-            <option value="">Select your business type</option>
-            <option>Café / Coffee Shop</option>
-            <option>Restaurant / Hotel</option>
-            <option>Food Manufacturer</option>
-            <option>Importer / Distributor</option>
-            <option>Retailer / E-commerce</option>
-            <option>Private Label / OEM</option>
-            <option>Other</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Sample Interest</label>
-          <select>
-            <option value="">Which product line are you interested in?</option>
-            <option>Matcha for Latte — Café / Beverage Use</option>
-            <option>Premium Selected Matcha — Signature / High-end</option>
-            <option>Organic Matcha for Latte — Certified Organic</option>
-            <option>Premium Organic Matcha — Organic Premium</option>
-            <option>Not sure — please advise</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Message (Optional)</label>
-          <textarea placeholder="Tell us about your intended use, estimated monthly volume, or any specific requirements…"></textarea>
-        </div>
-        <button class="form-submit" onclick="submitForm('sample')">Request Free Sample →</button>
-        <p class="form-privacy">We respect your privacy. Your information is only used to process this inquiry.</p>
-        <div class="success-banner" id="success-sample">
-          ✓ Thank you! Your sample request has been received. We'll be in touch within 24 hours.
-        </div>
-      </div>
 
-      <!-- General Inquiry -->
-      <div class="form-panel" id="panel-inquiry">
         <div class="form-row">
           <div class="form-group">
-            <label>Your Name *</label>
-            <input type="text" placeholder="Full name">
+            <label for="f-product">Interested Product</label>
+            <select id="f-product" name="entry.2065175317">
+              <option value="">— Select —</option>
+              <option>Matcha for Latte</option>
+              <option>Matcha for Confectionery</option>
+              <option>Ceremonial Grade Matcha</option>
+              <option>Organic Matcha</option>
+              <option>Bulk Matcha</option>
+              <option>OEM / Private Label</option>
+            </select>
           </div>
           <div class="form-group">
-            <label>Company</label>
-            <input type="text" placeholder="Company name">
+            <label for="f-volume">Estimated Monthly Volume</label>
+            <select id="f-volume" name="entry.1943151567">
+              <option value="">— Select —</option>
+              <option>Less than 500 units/month</option>
+              <option>500 - 5,000 units/month</option>
+              <option>5,001 - 20,000 units/month</option>
+              <option>More than 20,000 units/month</option>
+              <option>Project-based / Variable</option>
+            </select>
           </div>
         </div>
+
         <div class="form-group">
-          <label>Email *</label>
-          <input type="email" placeholder="you@company.com">
+          <label for="f-purpose">Purpose of Use</label>
+          <textarea id="f-purpose" name="entry.2064081680" placeholder="Describe your intended application…" rows="3"></textarea>
         </div>
+
         <div class="form-group">
-          <label>Inquiry Topic</label>
-          <select>
-            <option value="">What is your inquiry about?</option>
-            <option>MOQ & Pricing</option>
-            <option>OEM / Custom Blend</option>
-            <option>Compliance & Documentation</option>
-            <option>Shipping & Logistics</option>
-            <option>Product Specifications</option>
-            <option>Partnership / Distribution</option>
-            <option>Other</option>
-          </select>
+          <label>Would you like to request a sample?</label>
+          <div class="form-radio-group">
+            <label><input type="radio" name="entry.1641927167" value="Yes, please send a sample."> Yes, please send a sample.</label>
+            <label><input type="radio" name="entry.1641927167" value="No, I am only requesting information at this time."> No, information only.</label>
+          </div>
         </div>
+
         <div class="form-group">
-          <label>Message *</label>
-          <textarea rows="5" placeholder="Please describe your inquiry in detail — including destination country, approximate volume, and any regulatory or labelling requirements."></textarea>
+          <label for="f-address">Address (if requesting a sample)</label>
+          <textarea id="f-address" name="entry.1453020786" placeholder="Street, City, State/Province, ZIP, Country" rows="2"></textarea>
         </div>
-        <button class="form-submit" onclick="submitForm('inquiry')">Send Inquiry →</button>
-        <p class="form-privacy">We respect your privacy. Your information is only used to process this inquiry.</p>
-        <div class="success-banner" id="success-inquiry">
-          ✓ Thank you! Your inquiry has been received. Our export team will reply within 24 hours.
+
+        <div class="form-group">
+          <label for="f-message">Message</label>
+          <textarea id="f-message" name="entry.653086408" placeholder="Specify sample details, delivery instructions, or any questions…" rows="4"></textarea>
         </div>
-      </div>
+
+        <button type="submit" class="form-submit-btn">Submit Inquiry →</button>
+      </form>
     </div>
   </div>
 </section>
@@ -1242,19 +1226,6 @@
 </footer>
 
 <script>
-  function switchTab(tab) {
-    document.querySelectorAll('.form-tab').forEach(function(t) { t.classList.remove('active'); });
-    document.querySelectorAll('.form-panel').forEach(function(p) { p.classList.remove('active'); });
-    event.target.classList.add('active');
-    document.getElementById('panel-' + tab).classList.add('active');
-  }
-
-  function submitForm(type) {
-    var banner = document.getElementById('success-' + type);
-    banner.style.display = 'block';
-    setTimeout(function() { banner.style.display = 'none'; }, 6000);
-  }
-
   // Smooth reveal on scroll
   var observer = new IntersectionObserver(function(entries) {
     entries.forEach(function(entry) {
