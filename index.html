@@ -1,1248 +1,1533 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PLUCK | Premium Japanese Matcha — Wholesale & OEM Supply</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --ink: #1a1a16;
-    --ink-mid: #3d3d35;
-    --ink-soft: #7a7a6e;
-    --green-deep: #2d4a2a;
-    --green-mid: #4a7a42;
-    --green-light: #7aaa6a;
-    --green-pale: #e8f0e4;
-    --green-mist: #f2f5ef;
-    --cream: #faf9f5;
-    --white: #ffffff;
-    --gold: #a08040;
-    --gold-pale: #f5f0e4;
-    --border: rgba(45,74,42,0.15);
-    --border-mid: rgba(45,74,42,0.25);
-  }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PLUCK | Premium Japanese Matcha — Wholesale & OEM Supply</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1a16;
+      --ink-mid: #3d3d35;
+      --ink-soft: #7a7a6e;
+      --green-deep: #2d4a2a;
+      --green-mid: #4a7a42;
+      --green-light: #7aaa6a;
+      --green-pale: #e8f0e4;
+      --green-mist: #f2f5ef;
+      --cream: #faf9f5;
+      --white: #ffffff;
+      --gold: #a08040;
+      --gold-pale: #f5f0e4;
+      --border: rgba(45, 74, 42, 0.15);
+      --border-mid: rgba(45, 74, 42, 0.25);
+    }
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+    }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--ink);
-    font-size: 16px;
-    line-height: 1.7;
-    overflow-x: hidden;
-  }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: var(--ink);
+      font-size: 16px;
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
 
-  /* ── Nav ── */
-  nav {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background: rgba(250,249,245,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border);
-    padding: 0 5vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 60px;
-  }
-  .nav-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--green-deep);
-    letter-spacing: 0.04em;
-  }
-  .nav-logo span { color: var(--gold); }
-  .nav-links { display: flex; gap: 28px; list-style: none; }
-  .nav-links a {
-    font-size: 13px;
-    font-weight: 400;
-    color: var(--ink-mid);
-    text-decoration: none;
-    letter-spacing: 0.05em;
-    transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--green-deep); }
-  .nav-cta {
-    background: var(--green-deep);
-    color: var(--white) !important;
-    padding: 8px 18px;
-    border-radius: 2px;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    letter-spacing: 0.06em !important;
-  }
-  .nav-cta:hover { background: var(--green-mid) !important; color: var(--white) !important; }
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 249, 245, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 5vw;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 60px;
+    }
 
-  /* ── Hero ── */
-  .hero {
-    min-height: 90vh;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 80px 5vw 80px;
-    gap: 60px;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute;
-    right: -10%;
-    top: -20%;
-    width: 60%;
-    height: 140%;
-    background: radial-gradient(ellipse at center, var(--green-pale) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-tag {
-    display: inline-block;
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--green-mid);
-    border: 1px solid var(--green-mid);
-    padding: 5px 14px;
-    border-radius: 2px;
-    margin-bottom: 24px;
-  }
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(44px, 6vw, 80px);
-    font-weight: 300;
-    line-height: 1.1;
-    color: var(--green-deep);
-    margin-bottom: 12px;
-  }
-  .hero h1 em {
-    font-style: italic;
-    font-weight: 300;
-    color: var(--ink);
-  }
-  .hero-sub {
-    font-size: 18px;
-    font-weight: 300;
-    color: var(--ink-mid);
-    margin-bottom: 36px;
-    max-width: 460px;
-  }
-  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 48px; }
-  .btn-primary {
-    background: var(--green-deep);
-    color: var(--white);
-    padding: 14px 28px;
-    border: none;
-    border-radius: 2px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: background 0.2s;
-  }
-  .btn-primary:hover { background: var(--green-mid); }
-  .btn-outline {
-    background: transparent;
-    color: var(--green-deep);
-    padding: 13px 28px;
-    border: 1px solid var(--green-deep);
-    border-radius: 2px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    transition: all 0.2s;
-  }
-  .btn-outline:hover { background: var(--green-pale); }
-  .hero-trust {
-    display: flex;
-    gap: 28px;
-    flex-wrap: wrap;
-  }
-  .trust-item {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--ink-soft);
-  }
-  .trust-dot {
-    width: 6px;
-    height: 6px;
-    background: var(--green-light);
-    border-radius: 50%;
-    flex-shrink: 0;
-  }
-  .hero-visual {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .hero-visual-inner {
-    width: 100%;
-    max-width: 440px;
-    aspect-ratio: 4/5;
-    background: var(--green-deep);
-    border-radius: 4px;
-    overflow: hidden;
-    position: relative;
-    display: flex;
-    align-items: flex-end;
-  }
-  .hero-visual-bg {
-    position: absolute;
-    inset: 0;
-    background:
-      radial-gradient(ellipse at 30% 20%, rgba(122,170,106,0.4) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 80%, rgba(45,74,42,0.8) 0%, transparent 60%),
-      linear-gradient(160deg, #3a6235 0%, #1a3018 60%, #0d1f0b 100%);
-  }
-  .hero-matcha-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -60%);
-    width: 160px;
-    height: 160px;
-    opacity: 0.12;
-  }
-  .hero-visual-caption {
-    position: relative;
-    z-index: 2;
-    padding: 28px;
-    width: 100%;
-  }
-  .hero-visual-caption p {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 28px;
-    font-weight: 300;
-    color: rgba(255,255,255,0.95);
-    line-height: 1.3;
-    margin-bottom: 8px;
-  }
-  .hero-visual-caption span {
-    font-size: 12px;
-    font-weight: 400;
-    color: rgba(255,255,255,0.5);
-    letter-spacing: 0.1em;
-  }
-  .hero-badge {
-    position: absolute;
-    top: 28px;
-    right: -12px;
-    background: var(--gold-pale);
-    border: 1px solid rgba(160,128,64,0.3);
-    border-radius: 2px;
-    padding: 12px 16px;
-    text-align: center;
-  }
-  .hero-badge strong {
-    display: block;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--gold);
-    line-height: 1;
-  }
-  .hero-badge span {
-    display: block;
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    color: var(--ink-soft);
-    text-transform: uppercase;
-    margin-top: 4px;
-  }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--green-deep);
+      letter-spacing: 0.04em;
+    }
 
-  /* ── Section base ── */
-  section { padding: 90px 5vw; }
-  .section-label {
-    font-size: 11px;
-    font-weight: 500;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--green-mid);
-    margin-bottom: 14px;
-  }
-  .section-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(32px, 4vw, 52px);
-    font-weight: 300;
-    line-height: 1.15;
-    color: var(--green-deep);
-    margin-bottom: 16px;
-  }
-  .section-title em { font-style: italic; color: var(--ink); }
-  .section-lead {
-    font-size: 16px;
-    font-weight: 300;
-    color: var(--ink-mid);
-    max-width: 540px;
-    margin-bottom: 52px;
-    line-height: 1.8;
-  }
+    .nav-logo span {
+      color: var(--gold);
+    }
 
-  /* ── For whom ── */
-  .for-whom { background: var(--white); }
-  .whom-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 2px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-  }
-  .whom-card {
-    padding: 32px 28px;
-    background: var(--white);
-    transition: background 0.2s;
-    position: relative;
-  }
-  .whom-card:hover { background: var(--green-mist); }
-  .whom-icon {
-    font-size: 28px;
-    margin-bottom: 16px;
-    display: block;
-  }
-  .whom-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--green-deep);
-    margin-bottom: 10px;
-  }
-  .whom-card p {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.7;
-  }
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
 
-  /* ── Use cases ── */
-  .usecases { background: var(--green-mist); }
-  .uc-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-  }
-  .uc-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 32px 28px;
-    position: relative;
-    overflow: hidden;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .uc-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: var(--green-mid);
-  }
-  .uc-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(45,74,42,0.1); }
-  .uc-tag {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--green-mid);
-    background: var(--green-pale);
-    display: inline-block;
-    padding: 4px 10px;
-    border-radius: 2px;
-    margin-bottom: 16px;
-  }
-  .uc-card h3 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--ink);
-    margin-bottom: 12px;
-  }
-  .uc-card p {
-    font-size: 14px;
-    color: var(--ink-soft);
-    line-height: 1.8;
-    margin-bottom: 20px;
-  }
-  .uc-features { list-style: none; }
-  .uc-features li {
-    font-size: 13px;
-    color: var(--ink-mid);
-    padding: 5px 0;
-    padding-left: 16px;
-    position: relative;
-  }
-  .uc-features li::before {
-    content: '—';
-    position: absolute;
-    left: 0;
-    color: var(--green-light);
-    font-size: 12px;
-  }
+    .nav-links a {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--ink-mid);
+      text-decoration: none;
+      letter-spacing: 0.05em;
+      transition: color 0.2s;
+    }
 
-  /* ── Grades ── */
-  .grades { background: var(--white); }
-  .grade-table-wrap { overflow-x: auto; }
-  .grade-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-    min-width: 600px;
-  }
-  .grade-table th {
-    background: var(--green-deep);
-    color: var(--white);
-    padding: 14px 20px;
-    text-align: left;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    font-size: 13px;
-  }
-  .grade-table th:first-child { border-radius: 4px 0 0 0; }
-  .grade-table th:last-child { border-radius: 0 4px 0 0; }
-  .grade-table td {
-    padding: 14px 20px;
-    border-bottom: 1px solid var(--border);
-    color: var(--ink-mid);
-    vertical-align: top;
-  }
-  .grade-table tr:last-child td { border-bottom: none; }
-  .grade-table tr:nth-child(even) td { background: var(--green-mist); }
-  .grade-name {
-    font-weight: 500;
-    color: var(--green-deep);
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 16px;
-  }
-  .grade-badge {
-    font-size: 10px;
-    font-weight: 500;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    padding: 3px 8px;
-    border-radius: 2px;
-  }
-  .badge-ceremony { background: var(--gold-pale); color: var(--gold); border: 1px solid rgba(160,128,64,0.25); }
-  .badge-premium { background: var(--green-pale); color: var(--green-mid); border: 1px solid var(--border-mid); }
-  .badge-culinary { background: #f0f0f0; color: #666; border: 1px solid #ddd; }
+    .nav-links a:hover {
+      color: var(--green-deep);
+    }
 
-  /* ── Regions ── */
-  .regions { background: var(--green-mist); }
-  .region-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 16px;
-    margin-bottom: 40px;
-  }
-  .region-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 20px;
-    text-align: center;
-    transition: border-color 0.2s;
-  }
-  .region-card:hover { border-color: var(--green-mid); }
-  .region-flag { font-size: 32px; margin-bottom: 10px; display: block; }
-  .region-name { font-size: 14px; font-weight: 500; color: var(--ink); margin-bottom: 4px; }
-  .region-note { font-size: 12px; color: var(--ink-soft); }
+    .nav-cta {
+      background: var(--green-deep);
+      color: var(--white) !important;
+      padding: 8px 18px;
+      border-radius: 2px;
+      font-size: 13px !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.06em !important;
+    }
 
-  /* ── Compliance ── */
-  .compliance { background: var(--white); }
-  .cert-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 16px;
-  }
-  .cert-card {
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 24px 20px;
-    background: var(--white);
-    position: relative;
-  }
-  .cert-check {
-    width: 28px;
-    height: 28px;
-    background: var(--green-pale);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 14px;
-    color: var(--green-mid);
-    font-size: 14px;
-  }
-  .cert-card h4 {
-    font-size: 15px;
-    font-weight: 500;
-    color: var(--ink);
-    margin-bottom: 6px;
-  }
-  .cert-card p {
-    font-size: 13px;
-    color: var(--ink-soft);
-    line-height: 1.6;
-  }
-  .compliance-note {
-    margin-top: 36px;
-    padding: 20px 24px;
-    background: var(--green-mist);
-    border-left: 3px solid var(--green-mid);
-    border-radius: 0 4px 4px 0;
-    font-size: 14px;
-    color: var(--ink-mid);
-    max-width: 680px;
-  }
+    .nav-cta:hover {
+      background: var(--green-mid) !important;
+      color: var(--white) !important;
+    }
 
-  /* ── Contact ── */
-  .contact-section { background: var(--cream); }
-  .contact-wrap {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    align-items: start;
-  }
-  .contact-info h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(28px, 3.5vw, 44px);
-    font-weight: 300;
-    color: var(--green-deep);
-    margin-bottom: 16px;
-    line-height: 1.2;
-  }
-  .contact-info p {
-    font-size: 15px;
-    color: var(--ink-mid);
-    margin-bottom: 36px;
-    line-height: 1.8;
-    max-width: 400px;
-  }
-  .contact-channels { display: flex; flex-direction: column; gap: 14px; }
-  .channel-link {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 18px;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    text-decoration: none;
-    color: var(--ink);
-    background: var(--white);
-    transition: all 0.2s;
-    font-size: 14px;
-  }
-  .channel-link:hover { border-color: var(--green-mid); background: var(--green-mist); }
-  .channel-icon {
-    width: 36px;
-    height: 36px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    flex-shrink: 0;
-  }
-  .ch-wa { background: #e8f5e9; }
-  .ch-em { background: var(--green-pale); }
-  .ch-li { background: #e8f0f8; }
-  .channel-link span { font-weight: 400; color: var(--ink-mid); }
-  .channel-link strong { display: block; font-weight: 500; color: var(--ink); font-size: 14px; }
+    /* ── Hero ── */
+    .hero {
+      min-height: 90vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 80px 5vw 80px;
+      gap: 60px;
+      position: relative;
+      overflow: hidden;
+    }
 
-  /* ── Forms ── */
-  .form-card {
-    background: var(--white);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 36px 32px;
-  }
-  .form-title {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 24px;
-    font-weight: 600;
-    color: var(--green-deep);
-    margin-bottom: 6px;
-  }
-  .form-sub {
-    font-size: 13px;
-    color: var(--ink-soft);
-    margin-bottom: 24px;
-  }
+    .hero::before {
+      content: '';
+      position: absolute;
+      right: -10%;
+      top: -20%;
+      width: 60%;
+      height: 140%;
+      background: radial-gradient(ellipse at center, var(--green-pale) 0%, transparent 70%);
+      pointer-events: none;
+    }
 
-  /* ── Form Fields ── */
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-    margin-bottom: 16px;
-  }
-  .form-group label {
-    font-size: 12px;
-    font-weight: 500;
-    color: var(--ink-mid);
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-  .form-group label .req {
-    color: var(--green-mid);
-    margin-left: 2px;
-  }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    color: var(--ink);
-    background: var(--cream);
-    border: 1px solid var(--border-mid);
-    border-radius: 3px;
-    padding: 10px 12px;
-    width: 100%;
-    transition: border-color 0.2s, box-shadow 0.2s;
-    appearance: none;
-    -webkit-appearance: none;
-    outline: none;
-  }
-  .form-group select {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a7a42' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    padding-right: 32px;
-    cursor: pointer;
-  }
-  .form-group textarea {
-    resize: vertical;
-    min-height: 80px;
-    line-height: 1.6;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus {
-    border-color: var(--green-mid);
-    box-shadow: 0 0 0 3px rgba(74,122,66,0.12);
-    background: var(--white);
-  }
-  .form-radio-group {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
-  .form-radio-group label {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 13px;
-    color: var(--ink-mid);
-    text-transform: none;
-    letter-spacing: 0;
-    font-weight: 400;
-    cursor: pointer;
-  }
-  .form-radio-group input[type="radio"] {
-    width: 16px;
-    height: 16px;
-    accent-color: var(--green-deep);
-    cursor: pointer;
-    flex-shrink: 0;
-  }
-  .form-submit-btn {
-    width: 100%;
-    background: var(--green-deep);
-    color: var(--white);
-    border: none;
-    border-radius: 3px;
-    padding: 14px 24px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    cursor: pointer;
-    transition: background 0.2s;
-    margin-top: 8px;
-  }
-  .form-submit-btn:hover { background: var(--green-mid); }
+    .hero-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      border: 1px solid var(--green-mid);
+      padding: 5px 14px;
+      border-radius: 2px;
+      margin-bottom: 24px;
+    }
 
-  /* ── Footer ── */
-  footer {
-    background: var(--green-deep);
-    color: rgba(255,255,255,0.7);
-    padding: 48px 5vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  footer .foot-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 300;
-    color: var(--white);
-    letter-spacing: 0.04em;
-  }
-  footer p { font-size: 13px; }
-  footer a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 13px; }
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 300;
+      line-height: 1.1;
+      color: var(--green-deep);
+      margin-bottom: 12px;
+    }
 
-  /* ── Divider ── */
-  .wave-divider {
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--green-mid), var(--green-light), var(--green-mid), transparent);
-    opacity: 0.3;
-  }
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 300;
+      color: var(--ink);
+    }
 
-  /* ── Responsive ── */
-  @media (max-width: 860px) {
-    .hero { grid-template-columns: 1fr; min-height: auto; padding: 60px 5vw; }
-    .hero-visual { order: -1; }
-    .hero-visual-inner { max-width: 100%; aspect-ratio: 16/9; }
-    .hero-badge { right: 8px; }
-    .contact-wrap { grid-template-columns: 1fr; }
-    .form-row { grid-template-columns: 1fr; }
-    nav .nav-links { display: none; }
-    .nav-cta { display: none; }
-  }
+    .hero-sub {
+      font-size: 18px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      margin-bottom: 36px;
+      max-width: 460px;
+    }
 
-  @media (max-width: 600px) {
-    section { padding: 60px 5vw; }
-    .region-grid { grid-template-columns: repeat(2, 1fr); }
-    .form-card { padding: 24px 18px; }
-  }
-</style>
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 48px;
+    }
+
+    .btn-primary {
+      background: var(--green-deep);
+      color: var(--white);
+      padding: 14px 28px;
+      border: none;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover {
+      background: var(--green-mid);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--green-deep);
+      padding: 13px 28px;
+      border: 1px solid var(--green-deep);
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-outline:hover {
+      background: var(--green-pale);
+    }
+
+    .hero-trust {
+      display: flex;
+      gap: 28px;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--ink-soft);
+    }
+
+    .trust-dot {
+      width: 6px;
+      height: 6px;
+      background: var(--green-light);
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .hero-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-visual-inner {
+      width: 100%;
+      max-width: 440px;
+      aspect-ratio: 4/5;
+      background: var(--green-deep);
+      border-radius: 4px;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .hero-visual-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 30% 20%, rgba(122, 170, 106, 0.4) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 80%, rgba(45, 74, 42, 0.8) 0%, transparent 60%),
+        linear-gradient(160deg, #3a6235 0%, #1a3018 60%, #0d1f0b 100%);
+    }
+
+    .hero-matcha-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -60%);
+      width: 160px;
+      height: 160px;
+      opacity: 0.12;
+    }
+
+    .hero-visual-caption {
+      position: relative;
+      z-index: 2;
+      padding: 28px;
+      width: 100%;
+    }
+
+    .hero-visual-caption p {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 28px;
+      font-weight: 300;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.3;
+      margin-bottom: 8px;
+    }
+
+    .hero-visual-caption span {
+      font-size: 12px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.5);
+      letter-spacing: 0.1em;
+    }
+
+    .hero-badge {
+      position: absolute;
+      top: 28px;
+      right: -12px;
+      background: var(--gold-pale);
+      border: 1px solid rgba(160, 128, 64, 0.3);
+      border-radius: 2px;
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    .hero-badge strong {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 32px;
+      font-weight: 600;
+      color: var(--gold);
+      line-height: 1;
+    }
+
+    .hero-badge span {
+      display: block;
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--ink-soft);
+      text-transform: uppercase;
+      margin-top: 4px;
+    }
+
+    /* ── Section base ── */
+    section {
+      padding: 90px 5vw;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      margin-bottom: 14px;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(32px, 4vw, 52px);
+      font-weight: 300;
+      line-height: 1.15;
+      color: var(--green-deep);
+      margin-bottom: 16px;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--ink);
+    }
+
+    .section-lead {
+      font-size: 16px;
+      font-weight: 300;
+      color: var(--ink-mid);
+      max-width: 540px;
+      margin-bottom: 52px;
+      line-height: 1.8;
+    }
+
+    /* ── For whom ── */
+    .for-whom {
+      background: var(--white);
+    }
+
+    .whom-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .whom-card {
+      padding: 32px 28px;
+      background: var(--white);
+      transition: background 0.2s;
+      position: relative;
+    }
+
+    .whom-card:hover {
+      background: var(--green-mist);
+    }
+
+    .whom-icon {
+      font-size: 28px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .whom-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--green-deep);
+      margin-bottom: 10px;
+    }
+
+    .whom-card p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.7;
+    }
+
+    /* ── Use cases ── */
+    .usecases {
+      background: var(--green-mist);
+    }
+
+    .uc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .uc-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 32px 28px;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .uc-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: var(--green-mid);
+    }
+
+    .uc-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(45, 74, 42, 0.1);
+    }
+
+    .uc-tag {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--green-mid);
+      background: var(--green-pale);
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 16px;
+    }
+
+    .uc-card h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 12px;
+    }
+
+    .uc-card p {
+      font-size: 14px;
+      color: var(--ink-soft);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .uc-features {
+      list-style: none;
+    }
+
+    .uc-features li {
+      font-size: 13px;
+      color: var(--ink-mid);
+      padding: 5px 0;
+      padding-left: 16px;
+      position: relative;
+    }
+
+    .uc-features li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--green-light);
+      font-size: 12px;
+    }
+
+    /* ── Grades ── */
+    .grades {
+      background: var(--white);
+    }
+
+    .grade-table-wrap {
+      overflow-x: auto;
+    }
+
+    .grade-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+      min-width: 600px;
+    }
+
+    .grade-table th {
+      background: var(--green-deep);
+      color: var(--white);
+      padding: 14px 20px;
+      text-align: left;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      font-size: 13px;
+    }
+
+    .grade-table th:first-child {
+      border-radius: 4px 0 0 0;
+    }
+
+    .grade-table th:last-child {
+      border-radius: 0 4px 0 0;
+    }
+
+    .grade-table td {
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--border);
+      color: var(--ink-mid);
+      vertical-align: top;
+    }
+
+    .grade-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .grade-table tr:nth-child(even) td {
+      background: var(--green-mist);
+    }
+
+    .grade-name {
+      font-weight: 500;
+      color: var(--green-deep);
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 16px;
+    }
+
+    .grade-badge {
+      font-size: 10px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    .badge-ceremony {
+      background: var(--gold-pale);
+      color: var(--gold);
+      border: 1px solid rgba(160, 128, 64, 0.25);
+    }
+
+    .badge-premium {
+      background: var(--green-pale);
+      color: var(--green-mid);
+      border: 1px solid var(--border-mid);
+    }
+
+    .badge-culinary {
+      background: #f0f0f0;
+      color: #666;
+      border: 1px solid #ddd;
+    }
+
+    /* ── Regions ── */
+    .regions {
+      background: var(--green-mist);
+    }
+
+    .region-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .region-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 20px;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+
+    .region-card:hover {
+      border-color: var(--green-mid);
+    }
+
+    .region-flag {
+      font-size: 32px;
+      margin-bottom: 10px;
+      display: block;
+    }
+
+    .region-name {
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+
+    .region-note {
+      font-size: 12px;
+      color: var(--ink-soft);
+    }
+
+    /* ── Compliance ── */
+    .compliance {
+      background: var(--white);
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+    }
+
+    .cert-card {
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 24px 20px;
+      background: var(--white);
+      position: relative;
+    }
+
+    .cert-check {
+      width: 28px;
+      height: 28px;
+      background: var(--green-pale);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      color: var(--green-mid);
+      font-size: 14px;
+    }
+
+    .cert-card h4 {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .cert-card p {
+      font-size: 13px;
+      color: var(--ink-soft);
+      line-height: 1.6;
+    }
+
+    .compliance-note {
+      margin-top: 36px;
+      padding: 20px 24px;
+      background: var(--green-mist);
+      border-left: 3px solid var(--green-mid);
+      border-radius: 0 4px 4px 0;
+      font-size: 14px;
+      color: var(--ink-mid);
+      max-width: 680px;
+    }
+
+    /* ── Contact ── */
+    .contact-section {
+      background: var(--cream);
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+
+    .contact-info h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(28px, 3.5vw, 44px);
+      font-weight: 300;
+      color: var(--green-deep);
+      margin-bottom: 16px;
+      line-height: 1.2;
+    }
+
+    .contact-info p {
+      font-size: 15px;
+      color: var(--ink-mid);
+      margin-bottom: 36px;
+      line-height: 1.8;
+      max-width: 400px;
+    }
+
+    .contact-channels {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .channel-link {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 18px;
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--ink);
+      background: var(--white);
+      transition: all 0.2s;
+      font-size: 14px;
+    }
+
+    .channel-link:hover {
+      border-color: var(--green-mid);
+      background: var(--green-mist);
+    }
+
+    .channel-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      flex-shrink: 0;
+    }
+
+    .ch-wa {
+      background: #e8f5e9;
+    }
+
+    .ch-em {
+      background: var(--green-pale);
+    }
+
+    .ch-li {
+      background: #e8f0f8;
+    }
+
+    .channel-link span {
+      font-weight: 400;
+      color: var(--ink-mid);
+    }
+
+    .channel-link strong {
+      display: block;
+      font-weight: 500;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    /* ── Forms ── */
+    .form-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 36px 32px;
+    }
+
+    .form-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 24px;
+      font-weight: 600;
+      color: var(--green-deep);
+      margin-bottom: 6px;
+    }
+
+    .form-sub {
+      font-size: 13px;
+      color: var(--ink-soft);
+      margin-bottom: 24px;
+    }
+
+    /* ── Form Fields ── */
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin-bottom: 16px;
+    }
+
+    .form-group label {
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--ink-mid);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .form-group label .req {
+      color: var(--green-mid);
+      margin-left: 2px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      color: var(--ink);
+      background: var(--cream);
+      border: 1px solid var(--border-mid);
+      border-radius: 3px;
+      padding: 10px 12px;
+      width: 100%;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+    }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%234a7a42' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 12px center;
+      padding-right: 32px;
+      cursor: pointer;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+      line-height: 1.6;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--green-mid);
+      box-shadow: 0 0 0 3px rgba(74, 122, 66, 0.12);
+      background: var(--white);
+    }
+
+    .form-radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .form-radio-group label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--ink-mid);
+      text-transform: none;
+      letter-spacing: 0;
+      font-weight: 400;
+      cursor: pointer;
+    }
+
+    .form-radio-group input[type="radio"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--green-deep);
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .form-submit-btn {
+      width: 100%;
+      background: var(--green-deep);
+      color: var(--white);
+      border: none;
+      border-radius: 3px;
+      padding: 14px 24px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      cursor: pointer;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+
+    .form-submit-btn:hover {
+      background: var(--green-mid);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--green-deep);
+      color: rgba(255, 255, 255, 0.7);
+      padding: 48px 5vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    footer .foot-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 22px;
+      font-weight: 300;
+      color: var(--white);
+      letter-spacing: 0.04em;
+    }
+
+    footer p {
+      font-size: 13px;
+    }
+
+    footer a {
+      color: rgba(255, 255, 255, 0.6);
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    /* ── Divider ── */
+    .wave-divider {
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--green-mid), var(--green-light), var(--green-mid), transparent);
+      opacity: 0.3;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 860px) {
+      .hero {
+        grid-template-columns: 1fr;
+        min-height: auto;
+        padding: 60px 5vw;
+      }
+
+      .hero-visual {
+        order: -1;
+      }
+
+      .hero-visual-inner {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+      }
+
+      .hero-badge {
+        right: 8px;
+      }
+
+      .contact-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      nav .nav-links {
+        display: none;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      section {
+        padding: 60px 5vw;
+      }
+
+      .region-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .form-card {
+        padding: 24px 18px;
+      }
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav>
-  <div class="nav-logo">PLUCK<span>.</span></div>
-  <ul class="nav-links">
-    <li><a href="#usecases">Products</a></li>
-    <li><a href="#grades">Grades</a></li>
-    <li><a href="#compliance">Compliance</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#sample" class="nav-cta">Request Sample</a></li>
-  </ul>
-</nav>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">PLUCK<span>.</span></div>
+    <ul class="nav-links">
+      <li><a href="#usecases">Products</a></li>
+      <li><a href="#grades">Grades</a></li>
+      <li><a href="#compliance">Compliance</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#sample" class="nav-cta">Request Sample</a></li>
+    </ul>
+  </nav>
 
-<!-- Hero -->
-<section class="hero">
-  <div class="hero-content">
-    <div class="hero-tag">PLUCK Inc. — Japanese Matcha B2B Export</div>
-    <h1>Authentic Matcha,<br><em>Honestly Delivered</em></h1>
-    <p class="hero-sub">As matcha grows globally, its true origin is often lost. PLUCK works closely with farmers across Japan — bringing authentic, single-origin matcha to the world with respect, honesty, and care.</p>
-    <div class="hero-actions">
-      <a href="#sample" class="btn-primary">Request Free Sample</a>
-      <a href="#usecases" class="btn-outline">Explore Products →</a>
-    </div>
-    <div class="hero-trust">
-      <div class="trust-item"><span class="trust-dot"></span>Direct-sourced from premier tea regions</div>
-      <div class="trust-item"><span class="trust-dot"></span>100% genuine Japan-grown</div>
-      <div class="trust-item"><span class="trust-dot"></span>Organic & conventional options</div>
-      <div class="trust-item"><span class="trust-dot"></span>MOQ from 10 kg</div>
-    </div>
-  </div>
-
-  <div class="hero-visual">
-    <div class="hero-visual-inner">
-      <div class="hero-visual-bg"></div>
-      <svg class="hero-matcha-icon" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <circle cx="80" cy="80" r="70" stroke="white" stroke-width="2"/>
-        <path d="M80 30 C80 30 50 60 50 90 C50 107 63 120 80 120 C97 120 110 107 110 90 C110 60 80 30 80 30Z" fill="white"/>
-      </svg>
-      <div class="hero-visual-caption">
-        <p>直接仕入れ<br>Single-origin<br>Japanese Matcha</p>
-        <span>Uji · Nishio · Yame · Kagoshima · Shizuoka</span>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-tag">PLUCK Inc. — Japanese Matcha B2B Export</div>
+      <h1>Authentic Matcha,<br><em>Honestly Delivered</em></h1>
+      <p class="hero-sub">As matcha grows globally, its true origin is often lost. PLUCK works closely with farmers
+        across Japan — bringing authentic, single-origin matcha to the world with respect, honesty, and care.</p>
+      <div class="hero-actions">
+        <a href="#sample" class="btn-primary">Request Free Sample</a>
+        <a href="#usecases" class="btn-outline">Explore Products →</a>
+      </div>
+      <div class="hero-trust">
+        <div class="trust-item"><span class="trust-dot"></span>Direct-sourced from premier tea regions</div>
+        <div class="trust-item"><span class="trust-dot"></span>100% genuine Japan-grown</div>
+        <div class="trust-item"><span class="trust-dot"></span>Organic & conventional options</div>
+        <div class="trust-item"><span class="trust-dot"></span>MOQ from 10 kg</div>
       </div>
     </div>
-    <div class="hero-badge">
-      <strong>6</strong>
-      <span>markets<br>worldwide</span>
-    </div>
-  </div>
-</section>
 
-<div class="wave-divider"></div>
+    <div class="hero-visual">
+      <div class="hero-visual-inner">
+        <div class="hero-visual-bg"></div>
+        <svg class="hero-matcha-icon" viewBox="0 0 160 160" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="80" cy="80" r="70" stroke="white" stroke-width="2" />
+          <path d="M80 30 C80 30 50 60 50 90 C50 107 63 120 80 120 C97 120 110 107 110 90 C110 60 80 30 80 30Z"
+            fill="white" />
+        </svg>
+        <div class="hero-visual-caption">
+          <p>直接仕入れ<br>Single-origin<br>Japanese Matcha</p>
+          <span>Uji · Nishio · Yame · Kagoshima · Shizuoka</span>
+        </div>
+      </div>
+      <div class="hero-badge">
+        <strong>6</strong>
+        <span>markets<br>worldwide</span>
+      </div>
+    </div>
+  </section>
 
-<!-- Who It's For -->
-<section class="for-whom" id="for-whom">
-  <div class="section-label">Why PLUCK</div>
-  <div class="section-title">Built for <em>trade buyers</em></div>
-  <p class="section-lead">PLUCK sources directly from Japan's premier tea regions, supplying cafés, distributors, and food businesses with 100% genuine Japanese matcha — tailored to your volume, use case, and market.</p>
+  <div class="wave-divider"></div>
 
-  <div class="whom-grid">
-    <div class="whom-card">
-      <span class="whom-icon">☕</span>
-      <h3>Cafés & Chains</h3>
-      <p>Consistent latte-grade and ceremonial matcha in reclosable bulk bags or portion packs. Low MOQ to trial, scale as you grow.</p>
-    </div>
-    <div class="whom-card">
-      <span class="whom-icon">🏭</span>
-      <h3>Food Manufacturers</h3>
-      <p>Industrial-grade culinary matcha for baking, flavouring, ice cream, and confectionery. Stable colour and flavour profiles guaranteed.</p>
-    </div>
-    <div class="whom-card">
-      <span class="whom-icon">📦</span>
-      <h3>Importers & Distributors</h3>
-      <p>Palletised bulk supply with full customs documentation, origin certificates, and multi-country labelling options.</p>
-    </div>
-    <div class="whom-card">
-      <span class="whom-icon">🏷️</span>
-      <h3>Private Label / OEM</h3>
-      <p>Custom blending, grading, and packaging under your brand. We handle R&D formulations and small-batch trials before scale-up.</p>
-    </div>
-    <div class="whom-card">
-      <span class="whom-icon">🛒</span>
-      <h3>Retail & E-commerce</h3>
-      <p>Beautifully packaged ceremonial matcha ready for shelf or fulfilment — with DTC-friendly sizes from 20 g to 1 kg.</p>
-    </div>
-  </div>
-</section>
+  <!-- Who It's For -->
+  <section class="for-whom" id="for-whom">
+    <div class="section-label">Why PLUCK</div>
+    <div class="section-title">Built for <em>trade buyers</em></div>
+    <p class="section-lead">PLUCK sources directly from Japan's premier tea regions, supplying cafés, distributors, and
+      food businesses with 100% genuine Japanese matcha — tailored to your volume, use case, and market.</p>
 
-<div class="wave-divider"></div>
+    <div class="whom-grid">
+      <div class="whom-card">
+        <span class="whom-icon">☕</span>
+        <h3>Cafés & Chains</h3>
+        <p>Consistent latte-grade and ceremonial matcha in reclosable bulk bags or portion packs. Low MOQ to trial,
+          scale as you grow.</p>
+      </div>
+      <div class="whom-card">
+        <span class="whom-icon">🏭</span>
+        <h3>Food Manufacturers</h3>
+        <p>Industrial-grade culinary matcha for baking, flavouring, ice cream, and confectionery. Stable colour and
+          flavour profiles guaranteed.</p>
+      </div>
+      <div class="whom-card">
+        <span class="whom-icon">📦</span>
+        <h3>Importers & Distributors</h3>
+        <p>Palletised bulk supply with full customs documentation, origin certificates, and multi-country labelling
+          options.</p>
+      </div>
+      <div class="whom-card">
+        <span class="whom-icon">🏷️</span>
+        <h3>Private Label / OEM</h3>
+        <p>Custom blending, grading, and packaging under your brand. We handle R&D formulations and small-batch trials
+          before scale-up.</p>
+      </div>
+      <div class="whom-card">
+        <span class="whom-icon">🛒</span>
+        <h3>Retail & E-commerce</h3>
+        <p>Beautifully packaged ceremonial matcha ready for shelf or fulfilment — with DTC-friendly sizes from 20 g to 1
+          kg.</p>
+      </div>
+    </div>
+  </section>
 
-<!-- Use Cases -->
-<section class="usecases" id="usecases">
-  <div class="section-label">Product Applications</div>
-  <div class="section-title">The right matcha<br><em>for every use</em></div>
-  <p class="section-lead">We match your application to the correct grade, grind, and origin — so you get repeatable quality with every batch.</p>
+  <div class="wave-divider"></div>
 
-  <div class="uc-grid">
-    <div class="uc-card">
-      <span class="uc-tag">Café Beverage</span>
-      <h3>Matcha Latte Ready</h3>
-      <p>Ceremonial and premium culinary grades optimised for milk-pairing. Fine grind, bright green colour, low bitterness.</p>
-      <ul class="uc-features">
-        <li>Dissolves easily in cold or hot milk</li>
-        <li>Stable colour — no graying</li>
-        <li>Recommended: Grade A2 or B1</li>
-        <li>Packaging: 1 kg / 5 kg resealable</li>
-      </ul>
+  <!-- Use Cases -->
+  <section class="usecases" id="usecases">
+    <div class="section-label">Product Applications</div>
+    <div class="section-title">The right matcha<br><em>for every use</em></div>
+    <p class="section-lead">We match your application to the correct grade, grind, and origin — so you get repeatable
+      quality with every batch.</p>
+
+    <div class="uc-grid">
+      <div class="uc-card">
+        <span class="uc-tag">Café Beverage</span>
+        <h3>Matcha Latte Ready</h3>
+        <p>Ceremonial and premium culinary grades optimised for milk-pairing. Fine grind, bright green colour, low
+          bitterness.</p>
+        <ul class="uc-features">
+          <li>Dissolves easily in cold or hot milk</li>
+          <li>Stable colour — no graying</li>
+          <li>Recommended: Grade A2 or B1</li>
+          <li>Packaging: 1 kg / 5 kg resealable</li>
+        </ul>
+      </div>
+
+      <div class="uc-card">
+        <span class="uc-tag">Bakery & Pastry</span>
+        <h3>Confectionery Grade</h3>
+        <p>High-pigment culinary matcha for cakes, cookies, croissants, and pralines. Heat-resistant colour formula
+          available.</p>
+        <ul class="uc-features">
+          <li>High chlorophyll — vivid baked colour</li>
+          <li>Strong umami base note</li>
+          <li>Recommended: Grade C1 / C2</li>
+          <li>Packaging: 5 kg / 25 kg bulk</li>
+        </ul>
+      </div>
+
+      <div class="uc-card">
+        <span class="uc-tag">OEM / Private Label</span>
+        <h3>Custom Blending</h3>
+        <p>Proprietary blends developed for your brand: single-origin, blended, flavoured, or ceremonial. MOQ and lead
+          time discussed on request.</p>
+        <ul class="uc-features">
+          <li>Custom grind size (30–100 µm)</li>
+          <li>Bespoke flavour profiles</li>
+          <li>Your label, your packaging spec</li>
+          <li>NDA / exclusivity available</li>
+        </ul>
+      </div>
+
+      <div class="uc-card">
+        <span class="uc-tag">Ceremonial</span>
+        <h3>Premium Retail</h3>
+        <p>First-flush, stone-ground, single-estate ceremonial matcha for high-end retail or tea ceremony supply.</p>
+        <ul class="uc-features">
+          <li>Hand-picked tencha from Uji</li>
+          <li>Traditional granite stone mill</li>
+          <li>Available in 30 g tins or 100 g pouches</li>
+          <li>Lot traceability certificates issued</li>
+        </ul>
+      </div>
+
+      <div class="uc-card">
+        <span class="uc-tag">Bulk / Industrial</span>
+        <h3>Food Ingredient Supply</h3>
+        <p>Consistent, cost-efficient bulk matcha for flavoured drinks, supplements, and large-scale manufacturing.</p>
+        <ul class="uc-features">
+          <li>25 kg bags, pallet orders</li>
+          <li>Colour/taste specifications maintained</li>
+          <li>Annual supply contracts available</li>
+          <li>Quarterly audits on request</li>
+        </ul>
+      </div>
+
+      <div class="uc-card">
+        <span class="uc-tag">Foodservice</span>
+        <h3>Instant / Premix</h3>
+        <p>Matcha premix with or without sweetener — designed for quick-service cafés and hotel F&amp;B operations.</p>
+        <ul class="uc-features">
+          <li>Just-add-milk format available</li>
+          <li>Oat milk and dairy formulations</li>
+          <li>HACCP-certified production</li>
+          <li>Shelf life 18–24 months</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="wave-divider"></div>
+
+  <!-- Grades -->
+  <section class="grades" id="grades">
+    <div class="section-label">Product Catalog</div>
+    <div class="section-title">Find your <em>right matcha</em></div>
+    <p class="section-lead">PLUCK supplies four product lines sourced from Japan's finest tea-growing regions. Below is
+      a simplified overview — detailed tasting notes and spec sheets are available on request.</p>
+
+    <div class="grade-table-wrap">
+      <table class="grade-table">
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Example SKUs</th>
+            <th>Flavour Profile</th>
+            <th>Best Use</th>
+            <th>Price Range (per kg)</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="grade-name">Matcha for Latte</span></td>
+            <td>OIS-1, NIS-Fuku Uji, NIS-Zui, KOU-1, IMM-Pre A</td>
+            <td>Balanced umami, mild–medium bitterness, holds well in milk</td>
+            <td>Café lattes, beverage menus, daily operations</td>
+            <td>¥16,000 – ¥30,000</td>
+            <td><span class="grade-badge badge-premium">Conventional</span></td>
+          </tr>
+          <tr>
+            <td><span class="grade-name">Premium Selected</span></td>
+            <td>KWH-1, IMM-TA, NIS-Kei Uji, KOU-2</td>
+            <td>Rich umami, refined sweetness, elegant aroma, deep green</td>
+            <td>Signature drinks, premium retail, high-end café menus</td>
+            <td>¥35,000 – ¥50,000</td>
+            <td><span class="grade-badge badge-ceremony">Premium</span></td>
+          </tr>
+          <tr>
+            <td><span class="grade-name">Organic for Latte</span></td>
+            <td>OIS-1 Bio, SGE-C Bio, MRB-1 Bio, IMM-Pre Bio</td>
+            <td>Clean, natural sweetness, authentic flavour, holds in milk</td>
+            <td>Organic café menus, certified beverage programmes</td>
+            <td>¥18,000 – ¥40,000</td>
+            <td><span class="grade-badge badge-premium">Organic</span></td>
+          </tr>
+          <tr>
+            <td><span class="grade-name">Premium Organic</span></td>
+            <td>MRF-1 Bio, CHE-NsoA Bio, IMM-TA Bio</td>
+            <td>Smooth, balanced bitterness, gentle sweetness, near-premium quality</td>
+            <td>Elevated organic menus, specialty retail, high-end foodservice</td>
+            <td>¥37,000 – ¥40,000</td>
+            <td><span class="grade-badge badge-ceremony">Organic Premium</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="font-size:13px; color:var(--ink-soft); margin-top:16px;">* Minimum order from 10 kg — feel free to discuss
+      smaller quantities. All prices are per kilogram. Free samples available (one time only). We also carry hojicha and
+      sencha.</p>
+  </section>
+
+  <div class="wave-divider"></div>
+
+  <!-- Regions -->
+  <section class="regions" id="regions">
+    <div class="section-label">Export Coverage</div>
+    <div class="section-title">From Japan to <em>the world</em></div>
+    <p class="section-lead">PLUCK exports premium Japanese matcha worldwide — supplying cafés, distributors, and food
+      businesses through our extensive global networks. Seamless global supply with full documentation support.</p>
+
+    <div class="region-grid">
+      <div class="region-card">
+        <span class="region-flag">🇯🇵</span>
+        <div class="region-name">Japan</div>
+        <div class="region-note">Domestic origin & supply</div>
+      </div>
+      <div class="region-card">
+        <span class="region-flag">🇺🇸</span>
+        <div class="region-name">United States</div>
+        <div class="region-note">FDA-compliant documentation</div>
+      </div>
+      <div class="region-card">
+        <span class="region-flag">🇦🇷</span>
+        <div class="region-name">Argentina</div>
+        <div class="region-note">South America distribution</div>
+      </div>
+      <div class="region-card">
+        <span class="region-flag">🇦🇪</span>
+        <div class="region-name">U.A.E</div>
+        <div class="region-note">Halal available</div>
+      </div>
+      <div class="region-card">
+        <span class="region-flag">🇩🇪</span>
+        <div class="region-name">Germany</div>
+        <div class="region-note">EU pesticide certified</div>
+      </div>
+      <div class="region-card">
+        <span class="region-flag">🇬🇧</span>
+        <div class="region-name">United Kingdom</div>
+        <div class="region-note">UKCA compliant</div>
+      </div>
+    </div>
+    <p style="font-size:14px; color:var(--ink-mid);">Don't see your country? We can work with your local food import
+      requirements — <a href="#contact" style="color:var(--green-mid); text-decoration:none;">get in touch</a>.</p>
+  </section>
+
+  <div class="wave-divider"></div>
+
+  <!-- Compliance -->
+  <section class="compliance" id="compliance">
+    <div class="section-label">Documents & Compliance</div>
+    <div class="section-title">Export-ready <em>documentation</em></div>
+    <p class="section-lead">Every shipment can be accompanied by the documentation your import team or customs broker
+      requires. Documents are issued on a per-lot basis.</p>
+
+    <div class="cert-grid">
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>FDA Prior Notice</h4>
+        <p>US import registration for food products. Filed for every shipment to the United States.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>Pesticide Residue Test</h4>
+        <p>Third-party lab analysis aligned with Japanese, EU, and US MRL standards. Report included per lot.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>Certificate of Origin</h4>
+        <p>Issued by the Japan Chamber of Commerce. Specifies prefecture of origin (Uji / Nishio / Yame).</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>Phytosanitary Certificate</h4>
+        <p>Required by many importing countries. Issued by the Japanese Ministry of Agriculture (MAFF).</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>Health Certificate</h4>
+        <p>Confirms product safety and manufacturing standards at source. Available for EU and GCC markets.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>Organic / JAS Certified</h4>
+        <p>Selected SKUs carry Japanese Agricultural Standard (JAS) organic certification. USDA NOP available on select
+          lots.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>HACCP / ISO 22000</h4>
+        <p>Manufacturing sites operate under HACCP principles. ISO 22000 certification documentation available on
+          request.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>Halal Certification</h4>
+        <p>Available for select product lines — please specify at time of inquiry for UAE, Malaysia, and Indonesia.</p>
+      </div>
+      <div class="cert-card">
+        <div class="cert-check">✓</div>
+        <h4>Heavy Metals Analysis</h4>
+        <p>Lead, cadmium, arsenic, and mercury tested to EU and Codex Alimentarius limits. Results provided per lot.</p>
+      </div>
     </div>
 
-    <div class="uc-card">
-      <span class="uc-tag">Bakery & Pastry</span>
-      <h3>Confectionery Grade</h3>
-      <p>High-pigment culinary matcha for cakes, cookies, croissants, and pralines. Heat-resistant colour formula available.</p>
-      <ul class="uc-features">
-        <li>High chlorophyll — vivid baked colour</li>
-        <li>Strong umami base note</li>
-        <li>Recommended: Grade C1 / C2</li>
-        <li>Packaging: 5 kg / 25 kg bulk</li>
-      </ul>
+    <div class="compliance-note">
+      <strong>Need a specific document?</strong> Our export documentation team can advise on what is required for your
+      country's import process. Please mention your destination country in the inquiry form below.
+    </div>
+  </section>
+
+  <div class="wave-divider"></div>
+
+  <!-- Contact & Forms -->
+  <section class="contact-section" id="contact">
+    <div style="text-align:center; margin-bottom:60px;">
+      <div class="section-label">Get in Touch</div>
+      <div class="section-title" style="text-align:center;">Ready to <em>start?</em></div>
+      <p style="font-size:16px; color:var(--ink-mid); max-width:500px; margin:0 auto;">Request a sample, ask a question,
+        or start a conversation about supply — our export team responds within 24 hours.</p>
     </div>
 
-    <div class="uc-card">
-      <span class="uc-tag">OEM / Private Label</span>
-      <h3>Custom Blending</h3>
-      <p>Proprietary blends developed for your brand: single-origin, blended, flavoured, or ceremonial. MOQ and lead time discussed on request.</p>
-      <ul class="uc-features">
-        <li>Custom grind size (30–100 µm)</li>
-        <li>Bespoke flavour profiles</li>
-        <li>Your label, your packaging spec</li>
-        <li>NDA / exclusivity available</li>
-      </ul>
-    </div>
+    <div class="contact-wrap" id="sample">
+      <div>
+        <h2>Prefer to reach us<br><em>directly?</em></h2>
+        <p>We're available via the channels below. Our export team is based in Japan (JST) and responds promptly to
+          business inquiries.</p>
 
-    <div class="uc-card">
-      <span class="uc-tag">Ceremonial</span>
-      <h3>Premium Retail</h3>
-      <p>First-flush, stone-ground, single-estate ceremonial matcha for high-end retail or tea ceremony supply.</p>
-      <ul class="uc-features">
-        <li>Hand-picked tencha from Uji</li>
-        <li>Traditional granite stone mill</li>
-        <li>Available in 30 g tins or 100 g pouches</li>
-        <li>Lot traceability certificates issued</li>
-      </ul>
-    </div>
+        <div class="contact-channels">
+          <a href="mailto:endo-t@pluck.co.jp" class="channel-link">
+            <div class="channel-icon ch-em">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span>endo-t@pluck.co.jp</span>
+            </div>
+          </a>
+          <a href="https://www.pluck-tokyo.com/" class="channel-link">
+            <div class="channel-icon ch-li">🌐</div>
+            <div>
+              <strong>Website</strong>
+              <span>www.pluck-tokyo.com</span>
+            </div>
+          </a>
+        </div>
 
-    <div class="uc-card">
-      <span class="uc-tag">Bulk / Industrial</span>
-      <h3>Food Ingredient Supply</h3>
-      <p>Consistent, cost-efficient bulk matcha for flavoured drinks, supplements, and large-scale manufacturing.</p>
-      <ul class="uc-features">
-        <li>25 kg bags, pallet orders</li>
-        <li>Colour/taste specifications maintained</li>
-        <li>Annual supply contracts available</li>
-        <li>Quarterly audits on request</li>
-      </ul>
-    </div>
+        <div style="margin-top:36px; padding:20px 0; border-top:1px solid var(--border);">
+          <p style="font-size:13px; color:var(--ink-soft); margin-bottom:4px;">Response time</p>
+          <p style="font-size:15px; color:var(--ink); font-weight:500;">Within 24 hours (business days)</p>
+          <p style="font-size:13px; color:var(--ink-soft); margin-top:12px; margin-bottom:4px;">Working hours</p>
+          <p style="font-size:15px; color:var(--ink); font-weight:500;">Mon–Fri, 9:00–18:00 JST</p>
+        </div>
+      </div>
 
-    <div class="uc-card">
-      <span class="uc-tag">Foodservice</span>
-      <h3>Instant / Premix</h3>
-      <p>Matcha premix with or without sweetener — designed for quick-service cafés and hotel F&amp;B operations.</p>
-      <ul class="uc-features">
-        <li>Just-add-milk format available</li>
-        <li>Oat milk and dairy formulations</li>
-        <li>HACCP-certified production</li>
-        <li>Shelf life 18–24 months</li>
-      </ul>
-    </div>
-  </div>
-</section>
+      <div class="form-card">
+        <p class="form-title">Send an Inquiry</p>
+        <p class="form-sub">Fill in the form below — our export team responds within 24 hours.</p>
 
-<div class="wave-divider"></div>
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSczGT8wjG64eyI41nftuJ_egyLOpUeSCFYx73nRVQQuFkJwXA/formResponse"
+          method="POST" target="_blank">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-name">Your Name</label>
+              <input type="text" id="f-name" name="entry.452693008" placeholder="Jane Smith">
+            </div>
+            <div class="form-group">
+              <label for="f-email">Email Address <span class="req">*</span></label>
+              <input type="email" id="f-email" name="entry.1079146583" placeholder="jane@company.com" required>
+            </div>
+          </div>
 
-<!-- Grades -->
-<section class="grades" id="grades">
-  <div class="section-label">Product Catalog</div>
-  <div class="section-title">Find your <em>right matcha</em></div>
-  <p class="section-lead">PLUCK supplies four product lines sourced from Japan's finest tea-growing regions. Below is a simplified overview — detailed tasting notes and spec sheets are available on request.</p>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-country">Country / Region</label>
+              <select id="f-country" name="entry.523120424">
+                <option value="">— Select —</option>
+                <option>United States</option>
+                <option>Canada</option>
+                <option>United Kingdom</option>
+                <option>Australia</option>
+                <option>India</option>
+                <option>Japan</option>
+                <option>Germany</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-biz">Business Type</label>
+              <select id="f-biz" name="entry.1724985053">
+                <option value="">— Select —</option>
+                <option>Manufacturer/Producer</option>
+                <option>Distributor/Wholesaler</option>
+                <option>Retailer/E-commerce</option>
+                <option>Research &amp; Development</option>
+                <option>Academic/Education</option>
+                <option>Individual/Personal Use</option>
+                <option>Other</option>
+              </select>
+            </div>
+          </div>
 
-  <div class="grade-table-wrap">
-    <table class="grade-table">
-      <thead>
-        <tr>
-          <th>Category</th>
-          <th>Example SKUs</th>
-          <th>Flavour Profile</th>
-          <th>Best Use</th>
-          <th>Price Range (per kg)</th>
-          <th>Type</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><span class="grade-name">Matcha for Latte</span></td>
-          <td>OIS-1, NIS-Fuku Uji, NIS-Zui, KOU-1, IMM-Pre A</td>
-          <td>Balanced umami, mild–medium bitterness, holds well in milk</td>
-          <td>Café lattes, beverage menus, daily operations</td>
-          <td>¥16,000 – ¥30,000</td>
-          <td><span class="grade-badge badge-premium">Conventional</span></td>
-        </tr>
-        <tr>
-          <td><span class="grade-name">Premium Selected</span></td>
-          <td>KWH-1, IMM-TA, NIS-Kei Uji, KOU-2</td>
-          <td>Rich umami, refined sweetness, elegant aroma, deep green</td>
-          <td>Signature drinks, premium retail, high-end café menus</td>
-          <td>¥35,000 – ¥50,000</td>
-          <td><span class="grade-badge badge-ceremony">Premium</span></td>
-        </tr>
-        <tr>
-          <td><span class="grade-name">Organic for Latte</span></td>
-          <td>OIS-1 Bio, SGE-C Bio, MRB-1 Bio, IMM-Pre Bio</td>
-          <td>Clean, natural sweetness, authentic flavour, holds in milk</td>
-          <td>Organic café menus, certified beverage programmes</td>
-          <td>¥18,000 – ¥40,000</td>
-          <td><span class="grade-badge badge-premium">Organic</span></td>
-        </tr>
-        <tr>
-          <td><span class="grade-name">Premium Organic</span></td>
-          <td>MRF-1 Bio, CHE-NsoA Bio, IMM-TA Bio</td>
-          <td>Smooth, balanced bitterness, gentle sweetness, near-premium quality</td>
-          <td>Elevated organic menus, specialty retail, high-end foodservice</td>
-          <td>¥37,000 – ¥40,000</td>
-          <td><span class="grade-badge badge-ceremony">Organic Premium</span></td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <p style="font-size:13px; color:var(--ink-soft); margin-top:16px;">* Minimum order from 10 kg — feel free to discuss smaller quantities. All prices are per kilogram. Free samples available (one time only). We also carry hojicha and sencha.</p>
-</section>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="f-product">Interested Product</label>
+              <select id="f-product" name="entry.2065175317">
+                <option value="">— Select —</option>
+                <option>Matcha for Latte</option>
+                <option>Matcha for Confectionery</option>
+                <option>Ceremonial Grade Matcha</option>
+                <option>Organic Matcha</option>
+                <option>Bulk Matcha</option>
+                <option>OEM / Private Label</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="f-volume">Estimated Monthly Volume</label>
+              <select id="f-volume" name="entry.1943151567">
+                <option value="">— Select —</option>
+                <option>Less than 500 units/month</option>
+                <option>500 - 5,000 units/month</option>
+                <option>5,001 - 20,000 units/month</option>
+                <option>More than 20,000 units/month</option>
+                <option>Project-based / Variable</option>
+              </select>
+            </div>
+          </div>
 
-<div class="wave-divider"></div>
+          <div class="form-group">
+            <label for="f-purpose">Purpose of Use</label>
+            <textarea id="f-purpose" name="entry.2064081680" placeholder="Describe your intended application…"
+              rows="3"></textarea>
+          </div>
 
-<!-- Regions -->
-<section class="regions" id="regions">
-  <div class="section-label">Export Coverage</div>
-  <div class="section-title">From Japan to <em>the world</em></div>
-  <p class="section-lead">PLUCK exports premium Japanese matcha worldwide — supplying cafés, distributors, and food businesses through our extensive global networks. Seamless global supply with full documentation support.</p>
+          <div class="form-group">
+            <label>Would you like to request a sample?</label>
+            <div class="form-radio-group">
+              <label><input type="radio" name="entry.1641927167" value="Yes, please send a sample."> Yes, please send a
+                sample.</label>
+              <label><input type="radio" name="entry.1641927167"
+                  value="No, I am only requesting information at this time."> No, information only.</label>
+            </div>
+          </div>
 
-  <div class="region-grid">
-    <div class="region-card">
-      <span class="region-flag">🇯🇵</span>
-      <div class="region-name">Japan</div>
-      <div class="region-note">Domestic origin & supply</div>
-    </div>
-    <div class="region-card">
-      <span class="region-flag">🇺🇸</span>
-      <div class="region-name">United States</div>
-      <div class="region-note">FDA-compliant documentation</div>
-    </div>
-    <div class="region-card">
-      <span class="region-flag">🇦🇷</span>
-      <div class="region-name">Argentina</div>
-      <div class="region-note">South America distribution</div>
-    </div>
-    <div class="region-card">
-      <span class="region-flag">🇦🇪</span>
-      <div class="region-name">U.A.E</div>
-      <div class="region-note">Halal available</div>
-    </div>
-    <div class="region-card">
-      <span class="region-flag">🇩🇪</span>
-      <div class="region-name">Germany</div>
-      <div class="region-note">EU pesticide certified</div>
-    </div>
-    <div class="region-card">
-      <span class="region-flag">🇬🇧</span>
-      <div class="region-name">United Kingdom</div>
-      <div class="region-note">UKCA compliant</div>
-    </div>
-  </div>
-  <p style="font-size:14px; color:var(--ink-mid);">Don't see your country? We can work with your local food import requirements — <a href="#contact" style="color:var(--green-mid); text-decoration:none;">get in touch</a>.</p>
-</section>
+          <div class="form-group">
+            <label for="f-address">Address (if requesting a sample)</label>
+            <textarea id="f-address" name="entry.1453020786" placeholder="Street, City, State/Province, ZIP, Country"
+              rows="2"></textarea>
+          </div>
 
-<div class="wave-divider"></div>
+          <div class="form-group">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" name="entry.653086408"
+              placeholder="Specify sample details, delivery instructions, or any questions…" rows="4"></textarea>
+          </div>
 
-<!-- Compliance -->
-<section class="compliance" id="compliance">
-  <div class="section-label">Documents & Compliance</div>
-  <div class="section-title">Export-ready <em>documentation</em></div>
-  <p class="section-lead">Every shipment can be accompanied by the documentation your import team or customs broker requires. Documents are issued on a per-lot basis.</p>
+          <button type="submit" class="form-submit-btn">Submit Inquiry →</button>
+        </form>
+      </div>
+    </div>
+  </section>
 
-  <div class="cert-grid">
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>FDA Prior Notice</h4>
-      <p>US import registration for food products. Filed for every shipment to the United States.</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>Pesticide Residue Test</h4>
-      <p>Third-party lab analysis aligned with Japanese, EU, and US MRL standards. Report included per lot.</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>Certificate of Origin</h4>
-      <p>Issued by the Japan Chamber of Commerce. Specifies prefecture of origin (Uji / Nishio / Yame).</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>Phytosanitary Certificate</h4>
-      <p>Required by many importing countries. Issued by the Japanese Ministry of Agriculture (MAFF).</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>Health Certificate</h4>
-      <p>Confirms product safety and manufacturing standards at source. Available for EU and GCC markets.</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>Organic / JAS Certified</h4>
-      <p>Selected SKUs carry Japanese Agricultural Standard (JAS) organic certification. USDA NOP available on select lots.</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>HACCP / ISO 22000</h4>
-      <p>Manufacturing sites operate under HACCP principles. ISO 22000 certification documentation available on request.</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>Halal Certification</h4>
-      <p>Available for select product lines — please specify at time of inquiry for UAE, Malaysia, and Indonesia.</p>
-    </div>
-    <div class="cert-card">
-      <div class="cert-check">✓</div>
-      <h4>Heavy Metals Analysis</h4>
-      <p>Lead, cadmium, arsenic, and mercury tested to EU and Codex Alimentarius limits. Results provided per lot.</p>
-    </div>
-  </div>
-
-  <div class="compliance-note">
-    <strong>Need a specific document?</strong> Our export documentation team can advise on what is required for your country's import process. Please mention your destination country in the inquiry form below.
-  </div>
-</section>
-
-<div class="wave-divider"></div>
-
-<!-- Contact & Forms -->
-<section class="contact-section" id="contact">
-  <div style="text-align:center; margin-bottom:60px;">
-    <div class="section-label">Get in Touch</div>
-    <div class="section-title" style="text-align:center;">Ready to <em>start?</em></div>
-    <p style="font-size:16px; color:var(--ink-mid); max-width:500px; margin:0 auto;">Request a sample, ask a question, or start a conversation about supply — our export team responds within 24 hours.</p>
-  </div>
-
-  <div class="contact-wrap" id="sample">
+  <!-- Footer -->
+  <footer>
     <div>
-      <h2>Prefer to reach us<br><em>directly?</em></h2>
-      <p>We're available via the channels below. Our export team is based in Japan (JST) and responds promptly to business inquiries.</p>
-
-      <div class="contact-channels">
-        <a href="mailto:endo-t@pluck.co.jp" class="channel-link">
-          <div class="channel-icon ch-em">✉️</div>
-          <div>
-            <strong>Email</strong>
-            <span>endo-t@pluck.co.jp</span>
-          </div>
-        </a>
-        <a href="https://www.pluck-tokyo.com/" class="channel-link">
-          <div class="channel-icon ch-li">🌐</div>
-          <div>
-            <strong>Website</strong>
-            <span>www.pluck-tokyo.com</span>
-          </div>
-        </a>
-      </div>
-
-      <div style="margin-top:36px; padding:20px 0; border-top:1px solid var(--border);">
-        <p style="font-size:13px; color:var(--ink-soft); margin-bottom:4px;">Response time</p>
-        <p style="font-size:15px; color:var(--ink); font-weight:500;">Within 24 hours (business days)</p>
-        <p style="font-size:13px; color:var(--ink-soft); margin-top:12px; margin-bottom:4px;">Working hours</p>
-        <p style="font-size:15px; color:var(--ink); font-weight:500;">Mon–Fri, 9:00–18:00 JST</p>
-      </div>
+      <div class="foot-logo">PLUCK</div>
+      <p style="margin-top:8px;">Authentic Japanese Matcha — Wholesale Export</p>
+      <p style="margin-top:4px; font-size:13px;">1-3-1 Kita Aoyama, Minato-ku, Tokyo, Japan</p>
     </div>
-
-    <div class="form-card">
-      <p class="form-title">Send an Inquiry</p>
-      <p class="form-sub">Fill in the form below — our export team responds within 24 hours.</p>
-
-      <form
-        action="https://docs.google.com/forms/d/e/1FAIpQLSczGT8wjG64eyI41nftuJ_egyLOpUeSCFYx73nRVQQuFkJwXA/formResponse"
-        method="POST"
-        target="_blank"
-      >
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-name">Your Name</label>
-            <input type="text" id="f-name" name="entry.452693008" placeholder="Jane Smith">
-          </div>
-          <div class="form-group">
-            <label for="f-email">Email Address <span class="req">*</span></label>
-            <input type="email" id="f-email" name="entry.1079146583" placeholder="jane@company.com" required>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-country">Country / Region</label>
-            <select id="f-country" name="entry.523120424">
-              <option value="">— Select —</option>
-              <option>United States</option>
-              <option>Canada</option>
-              <option>United Kingdom</option>
-              <option>Australia</option>
-              <option>India</option>
-              <option>Japan</option>
-              <option>Germany</option>
-              <option>Other</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="f-biz">Business Type</label>
-            <select id="f-biz" name="entry.1724985053">
-              <option value="">— Select —</option>
-              <option>Manufacturer/Producer</option>
-              <option>Distributor/Wholesaler</option>
-              <option>Retailer/E-commerce</option>
-              <option>Research &amp; Development</option>
-              <option>Academic/Education</option>
-              <option>Individual/Personal Use</option>
-              <option>Other</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-row">
-          <div class="form-group">
-            <label for="f-product">Interested Product</label>
-            <select id="f-product" name="entry.2065175317">
-              <option value="">— Select —</option>
-              <option>Matcha for Latte</option>
-              <option>Matcha for Confectionery</option>
-              <option>Ceremonial Grade Matcha</option>
-              <option>Organic Matcha</option>
-              <option>Bulk Matcha</option>
-              <option>OEM / Private Label</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="f-volume">Estimated Monthly Volume</label>
-            <select id="f-volume" name="entry.1943151567">
-              <option value="">— Select —</option>
-              <option>Less than 500 units/month</option>
-              <option>500 - 5,000 units/month</option>
-              <option>5,001 - 20,000 units/month</option>
-              <option>More than 20,000 units/month</option>
-              <option>Project-based / Variable</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="f-purpose">Purpose of Use</label>
-          <textarea id="f-purpose" name="entry.2064081680" placeholder="Describe your intended application…" rows="3"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label>Would you like to request a sample?</label>
-          <div class="form-radio-group">
-            <label><input type="radio" name="entry.1641927167" value="Yes, please send a sample."> Yes, please send a sample.</label>
-            <label><input type="radio" name="entry.1641927167" value="No, I am only requesting information at this time."> No, information only.</label>
-          </div>
-        </div>
-
-        <div class="form-group">
-          <label for="f-address">Address (if requesting a sample)</label>
-          <textarea id="f-address" name="entry.1453020786" placeholder="Street, City, State/Province, ZIP, Country" rows="2"></textarea>
-        </div>
-
-        <div class="form-group">
-          <label for="f-message">Message</label>
-          <textarea id="f-message" name="entry.653086408" placeholder="Specify sample details, delivery instructions, or any questions…" rows="4"></textarea>
-        </div>
-
-        <button type="submit" class="form-submit-btn">Submit Inquiry →</button>
-      </form>
+    <div style="text-align:right;">
+      <p><a href="mailto:endo-t@pluck.co.jp">endo-t@pluck.co.jp</a></p>
+      <p style="margin-top:4px;"><a href="https://www.pluck-tokyo.com/">pluck-tokyo.com</a> &nbsp;·&nbsp; <a
+          href="#">Privacy Policy</a></p>
+      <p style="margin-top:8px; font-size:12px; opacity:0.5;">© 2026 PLUCK Inc. All rights reserved.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<!-- Footer -->
-<footer>
-  <div>
-    <div class="foot-logo">PLUCK</div>
-    <p style="margin-top:8px;">Authentic Japanese Matcha — Wholesale Export</p>
-    <p style="margin-top:4px; font-size:13px;">1-3-1 Kita Aoyama, Minato-ku, Tokyo, Japan</p>
-  </div>
-  <div style="text-align:right;">
-    <p><a href="mailto:endo-t@pluck.co.jp">endo-t@pluck.co.jp</a></p>
-    <p style="margin-top:4px;"><a href="https://www.pluck-tokyo.com/">pluck-tokyo.com</a> &nbsp;·&nbsp; <a href="#">Privacy Policy</a></p>
-    <p style="margin-top:8px; font-size:12px; opacity:0.5;">© 2026 PLUCK Inc. All rights reserved.</p>
-  </div>
-</footer>
+  <script>
+    // Smooth reveal on scroll
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
 
-<script>
-  // Smooth reveal on scroll
-  var observer = new IntersectionObserver(function(entries) {
-    entries.forEach(function(entry) {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
-      }
+    document.querySelectorAll('.uc-card, .cert-card, .whom-card, .region-card').forEach(function(el) {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(18px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
     });
-  }, { threshold: 0.07, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.uc-card, .cert-card, .whom-card, .region-card').forEach(function(el) {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(18px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
-  });
-</script>
+  </script>
 </body>
+
 </html>
