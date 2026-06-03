@@ -1,0 +1,39 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-serif);background:var(--color-cream-silk);padding:0;display:flex}
+  .half{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:30px 0}
+  .dark{background:var(--color-matcha-deep)}
+  .roundel{width:54px;height:54px;border-radius:9999px;background:radial-gradient(circle at 38% 32%,#2f6b4f,#0b3d2e 70%);border:1px solid color-mix(in oklab,var(--color-cream-silk) 22%,transparent);display:flex;align-items:center;justify-content:center;font-size:26px}
+  .brand{font-weight:500;letter-spacing:.12em;font-size:40px;line-height:1}
+  .ln{width:64px;height:1px;margin:2px 0}
+  .tok{letter-spacing:.38em;text-transform:uppercase;font-size:12px}
+  .tag{font-family:var(--font-serif);font-size:11px;letter-spacing:.04em;opacity:.7;margin-top:4px}
+  .onlight{color:var(--color-matcha-deep)}
+  .onlight .ln{background:color-mix(in oklab,var(--color-matcha-deep) 30%,transparent)}
+  .onlight .tok{color:var(--color-matcha-soft)}
+  .ondark{color:var(--color-cream-silk)}
+  .ondark .roundel{color:var(--color-cream-silk)}
+  .ondark .ln{background:color-mix(in oklab,var(--color-cream-silk) 40%,transparent)}
+  .ondark .tok{color:color-mix(in oklab,var(--color-cream-silk) 90%,transparent)}
+</style></head>
+<body>
+  <div class="half onlight">
+    <div class="roundel onlight" style="color:var(--color-cream-silk)">P</div>
+    <div class="brand">PLUCK</div>
+    <div class="ln"></div>
+    <div class="tok">Tokyo</div>
+    <div class="tag">placeholder roundel — supply green.webp</div>
+  </div>
+  <div class="half dark ondark">
+    <div class="roundel">P</div>
+    <div class="brand">PLUCK</div>
+    <div class="ln"></div>
+    <div class="tok">Tokyo</div>
+    <div class="tag">reversed on matcha-deep</div>
+  </div>
+</body></html>

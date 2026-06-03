@@ -1,0 +1,23 @@
+<!-- @dsCard group="Spacing" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{background:var(--color-cream-silk);padding:26px;font-family:var(--font-sans)}
+  .lab{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--fg3);margin:0 0 18px}
+  .row{display:flex;gap:24px}
+  .item{flex:1;text-align:center}
+  .card{height:78px;background:#fff;border-radius:16px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;color:var(--color-matcha-deep);font-size:12px;font-weight:600}
+  .nm{font-size:11px;font-weight:600;color:var(--color-charcoal-ink);margin-top:10px}
+  .vl{font-size:10px;color:var(--fg3);margin-top:1px}
+  .s-sm{box-shadow:var(--shadow-sm)}.s-md{box-shadow:var(--shadow-md)}.s-lg{box-shadow:var(--shadow-lg)}.s-2xl{box-shadow:var(--shadow-2xl)}
+</style></head>
+<body>
+  <p class="lab">Elevation · warm, low-contrast shadows</p>
+  <div class="row">
+    <div class="item"><div class="card s-sm">sm</div><div class="nm">Card resting</div><div class="vl">shadow-sm</div></div>
+    <div class="item"><div class="card s-md">md</div><div class="nm">Hover lift</div><div class="vl">shadow-md</div></div>
+    <div class="item"><div class="card s-lg">lg</div><div class="nm">Raised</div><div class="vl">shadow-lg</div></div>
+    <div class="item"><div class="card s-2xl">2xl</div><div class="nm">Image frame</div><div class="vl">shadow-2xl</div></div>
+  </div>
+</body></html>

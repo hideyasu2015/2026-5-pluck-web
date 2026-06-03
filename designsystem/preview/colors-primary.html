@@ -1,0 +1,28 @@
+<!-- @dsCard group="Colors" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-sans);background:var(--color-cream-silk);padding:22px}
+  .row{display:flex;gap:14px}
+  .sw{flex:1;border-radius:var(--radius-2xl);padding:14px;display:flex;flex-direction:column;justify-content:flex-end;height:104px;box-shadow:var(--shadow-sm)}
+  .name{font-size:13px;font-weight:600;letter-spacing:.01em}
+  .hex{font-size:11px;font-family:var(--font-mono,monospace);opacity:.8;margin-top:2px;font-variant-numeric:tabular-nums}
+  .role{font-size:10px;opacity:.65;margin-top:5px;text-transform:uppercase;letter-spacing:.12em}
+</style></head>
+<body>
+  <div class="row">
+    <div class="sw" style="background:var(--color-matcha-deep);color:var(--color-cream-silk)">
+      <div class="name">Matcha Deep</div><div class="hex">#0B3D2E</div>
+      <div class="role">Primary · hero / footer</div>
+    </div>
+    <div class="sw" style="background:var(--color-matcha-soft);color:#fff">
+      <div class="name">Matcha Soft</div><div class="hex">#1E6F50</div>
+      <div class="role">Links · hover · selection</div>
+    </div>
+    <div class="sw" style="background:var(--color-matcha-light);color:var(--color-matcha-deep)">
+      <div class="name">Matcha Light</div><div class="hex">#E3F1EA</div>
+      <div class="role">Tint · soft section bg</div>
+    </div>
+  </div>
+</body></html>

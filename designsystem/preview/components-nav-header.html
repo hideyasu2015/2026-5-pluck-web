@@ -1,0 +1,29 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-sans);background:var(--color-matcha-deep);padding:0}
+  .bar{display:flex;align-items:center;justify-content:space-between;padding:18px 28px}
+  .left{display:flex;align-items:center;gap:12px}
+  .roundel{width:36px;height:36px;border-radius:9999px;background:radial-gradient(circle at 38% 32%,#2f6b4f,#0b3d2e 70%);border:1px solid color-mix(in oklab,var(--color-cream-silk) 25%,transparent);display:flex;align-items:center;justify-content:center;color:var(--color-cream-silk);font-family:var(--font-serif);font-size:16px}
+  .wm{font-family:var(--font-serif);font-weight:500;letter-spacing:.18em;font-size:20px;color:var(--color-cream-silk)}
+  nav{display:flex;align-items:center;gap:26px}
+  nav a{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:color-mix(in oklab,var(--color-cream-silk) 92%,transparent);position:relative;padding-bottom:4px}
+  nav a.active{font-weight:600}
+  nav a.active::after{content:"";position:absolute;left:0;bottom:0;height:1px;width:100%;background:#fff}
+  .contact{border:1px solid color-mix(in oklab,var(--color-cream-silk) 30%,transparent);border-radius:9999px;padding:8px 18px;text-transform:none!important;letter-spacing:.02em!important}
+  .globe{display:flex;align-items:center;gap:6px;color:color-mix(in oklab,var(--color-cream-silk) 92%,transparent);font-size:11px;letter-spacing:.14em}
+</style></head>
+<body>
+  <div class="bar">
+    <div class="left"><div class="roundel">P</div><span class="wm">PLUCK</span></div>
+    <nav>
+      <a class="active">Home</a><a>Story</a><a>About</a><a>Wholesale</a><a>Products</a>
+      <a class="contact">Contact</a>
+      <span class="globe"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>EN</span>
+    </nav>
+  </div>
+</body></html>

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Brand" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-sans);background:var(--color-cream-silk);padding:22px;display:flex;gap:16px}
+  /* Photographic hero placeholder */
+  .hero{flex:1.4;position:relative;border-radius:16px;overflow:hidden;height:150px;background:
+     linear-gradient(180deg,color-mix(in oklab,var(--color-matcha-deep) 80%,transparent),transparent 45%,color-mix(in oklab,var(--color-matcha-deep) 90%,transparent)),
+     repeating-linear-gradient(45deg,#15543d,#15543d 11px,#1b6045 11px,#1b6045 22px)}
+  .hero .cap{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:var(--color-cream-silk)}
+  .hero .ttl{font-family:var(--font-serif);font-size:26px;font-weight:500}
+  .hero .nt{font-size:9px;letter-spacing:.14em;text-transform:uppercase;opacity:.7;margin-top:6px}
+  /* Product inset placeholder */
+  .tile{flex:1;border-radius:16px;background:var(--color-pearl-white);border:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;height:150px}
+  .jar{width:56px;height:78px;border-radius:10px;background:linear-gradient(160deg,#2f6b4f,#0b3d2e);box-shadow:var(--shadow-md)}
+  .nt2{font-size:9px;letter-spacing:.14em;text-transform:uppercase;color:var(--fg3)}
+</style></head>
+<body>
+  <div class="hero"><div class="cap"><div class="ttl">OUR MATCHA</div><div class="nt">full-bleed photo · opacity-40 · matcha-deep scrim</div></div></div>
+  <div class="tile"><div class="jar"></div><div class="nt2">product photo · pearl-white · object-contain</div></div>
+</body></html>

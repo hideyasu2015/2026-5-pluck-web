@@ -1,0 +1,46 @@
+/* PLUCK product catalog — real SKUs, categories, regions & copy from the site. */
+window.PLUCK_PRODUCTS = [
+  { code:"OIS-1", cat:"Matcha for Latte", region:"Yame, Fukuoka",
+    desc:"A cost-effective, Yabukita-based foodservice matcha made from domestically grown tea leaves. Delivers a strong matcha flavor even in milk — ideal for lattes and daily café menus.",
+    tone:"#0f4633" },
+  { code:"NIS-Fuku Uji", cat:"Matcha for Latte", region:"Uji, Kyoto",
+    desc:"A well-balanced Uji matcha with gentle sweetness and umami, finished clean and smooth. Easy to drink and ideal for lattes and versatile beverage use.",
+    tone:"#15543d" },
+  { code:"CKR-CJM", cat:"Matcha for Latte", region:"Japan",
+    desc:"A well-balanced, easy-drinking matcha with mild bitterness and a clean finish. Pairs well with milk, making it ideal for lattes and a wide range of café menus.",
+    tone:"#1b6045" },
+  { code:"NIS-Zui", cat:"Matcha for Latte", region:"Japan",
+    desc:"A vibrant, finely crafted matcha from carefully selected leaves. Smooth texture and refined umami balance create an elegant, well-rounded flavor for a wide range of beverages.",
+    tone:"#0f4633" },
+  { code:"UJE-K5", cat:"Matcha for Latte", region:"Uji, Kyoto",
+    desc:"A standard-grade matcha from second-flush Uji blends. Light and clean in profile, it creates a smooth, easy latte and offers consistent performance across menus.",
+    tone:"#15543d" },
+  { code:"KOU-1", cat:"Matcha for Latte", region:"Nara",
+    desc:"A Nara-grown matcha with a deep, full-bodied profile. Rich umami and balanced bitterness stand out even in milk — ideal for drinks that demand authentic matcha character.",
+    tone:"#0b3d2e" },
+  { code:"NIS-Kei", cat:"Premium Selected Matcha", region:"Uji, Kyoto",
+    desc:"A premium matcha with rich umami and refined depth. Full-bodied with a lingering finish, ideal for elevated drinks and latte applications.",
+    tone:"#0b3d2e" },
+  { code:"KWH-1", cat:"Premium Selected Matcha", region:"Uji, Kyoto",
+    desc:"A premium selected matcha distinguished by a vivid emerald color and deep, smooth umami that lingers — suited to ceremonial preparation and signature menus.",
+    tone:"#15543d" },
+  { code:"CHE-NsoB", cat:"Matcha for Latte", region:"Nishio, Aichi",
+    desc:"A low-bitterness matcha with a smooth, approachable profile. Built for consistency, it integrates seamlessly into milk-based drinks — ideal for entry-level and high-volume café use.",
+    tone:"#1b6045" },
+  { code:"SKE-LBE", cat:"Matcha for Latte", region:"Shizuoka",
+    desc:"A cost-efficient culinary-grade matcha with a bold, well-defined flavor. Ideal for baking, desserts, and latte applications where strong matcha character is required.",
+    tone:"#0f4633" },
+  { code:"IMM-Pre A", cat:"Premium Organic Matcha", region:"Kagoshima",
+    desc:"A Kirishima-grown matcha with rich, intense umami. Low in bitterness, it enhances milk's richness while delivering a smooth yet distinctive flavor.",
+    tone:"#0b3d2e" },
+  { code:"OIS-1 Bio", cat:"Organic Matcha for Latte", region:"Yame, Fukuoka",
+    desc:"The organic expression of our café staple — certified-organic leaves with the same dependable, milk-friendly strength for everyday latte service.",
+    tone:"#15543d" },
+];
+
+window.PLUCK_CATS = ["All","Matcha for Latte","Premium Selected Matcha","Organic Matcha for Latte","Premium Organic Matcha"];
+
+window.PLUCK_NAV = [
+  {id:"home",label:"Home"},{id:"story",label:"Story"},{id:"about",label:"About"},
+  {id:"wholesale",label:"Wholesale"},{id:"products",label:"Products"},
+];

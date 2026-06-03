@@ -1,0 +1,44 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Inter:wght@300;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-sans);background:var(--color-cream-silk);padding:22px;display:flex;gap:18px}
+  .card{width:260px;background:#fff;border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:var(--shadow-sm)}
+  .ph{height:128px;background:var(--color-pearl-white);display:flex;align-items:center;justify-content:center;position:relative}
+  .jar{width:62px;height:84px;border-radius:10px;background:linear-gradient(160deg,#2f6b4f,#0b3d2e);box-shadow:var(--shadow-md)}
+  .tagph{position:absolute;top:8px;left:8px;font-size:8px;color:var(--fg3);letter-spacing:.1em;text-transform:uppercase}
+  .body{padding:18px}
+  .cat{font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--color-gold-champagne);margin:0 0 6px}
+  .nm{font-family:var(--font-serif);font-size:22px;color:var(--color-charcoal-ink);margin:0 0 8px}
+  .desc{font-size:12px;font-weight:300;color:var(--fg2);line-height:1.5;margin:0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+  .foot{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--border);margin-top:16px;padding-top:14px;font-size:12px}
+  .org{color:var(--fg3);font-weight:500}
+  .exp{display:inline-flex;align-items:center;gap:6px;color:var(--color-matcha-deep);font-weight:600}
+</style></head>
+<body>
+  <div class="card">
+    <div class="ph"><span class="tagph">photo →</span><div class="jar"></div></div>
+    <div class="body">
+      <p class="cat">Matcha for Latte</p>
+      <h3 class="nm">OIS-1</h3>
+      <p class="desc">A cost-effective, Yabukita-based foodservice matcha. Delivers a strong matcha flavor even in milk — ideal for lattes and daily café menus.</p>
+      <div class="foot"><span class="org">Yame, Fukuoka</span>
+        <span class="exp">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="ph"><span class="tagph">photo →</span><div class="jar" style="background:linear-gradient(160deg,#3c7a5b,#15543d)"></div></div>
+    <div class="body">
+      <p class="cat">Premium Selected Matcha</p>
+      <h3 class="nm">NIS-Kei</h3>
+      <p class="desc">A premium matcha with rich umami and refined depth. Full-bodied with a lingering finish — ideal for elevated drinks and latte applications.</p>
+      <div class="foot"><span class="org">Uji, Kyoto</span>
+        <span class="exp">Explore <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+      </div>
+    </div>
+  </div>
+</body></html>

@@ -1,0 +1,24 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-sans);background:var(--color-cream-silk);padding:26px}
+  .lab{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--fg3);margin:0 0 14px}
+  .row{display:flex;gap:12px;flex-wrap:wrap}
+  .pill{padding:9px 22px;border-radius:9999px;font-size:13px;font-weight:500;letter-spacing:.01em;border:1px solid var(--border);background:#fff;color:var(--color-charcoal-light);cursor:pointer;transition:all .3s var(--ease-out)}
+  .pill.active{background:var(--color-matcha-deep);color:var(--color-cream-silk);border-color:var(--color-matcha-deep);box-shadow:var(--shadow-lg)}
+  .pill:not(.active):hover{border-color:var(--color-matcha-soft);color:var(--color-matcha-soft)}
+</style></head>
+<body>
+  <p class="lab">Filter pills · product catalog</p>
+  <div class="row">
+    <button class="pill active">All</button>
+    <button class="pill">Matcha for Latte</button>
+    <button class="pill">Premium Selected Matcha</button>
+    <button class="pill">Organic Matcha for Latte</button>
+    <button class="pill">Premium Organic Matcha</button>
+  </div>
+</body></html>
