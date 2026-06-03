@@ -1,0 +1,29 @@
+<!-- @dsCard group="Colors" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-sans);background:var(--color-cream-silk);padding:22px}
+  .lab{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--fg3);margin:0 0 9px}
+  .ladder{display:flex;border-radius:var(--radius-xl);overflow:hidden;box-shadow:var(--shadow-sm)}
+  .ladder div{flex:1;height:56px;display:flex;align-items:flex-end;padding:7px 9px;font-size:10px;font-family:var(--font-mono,monospace)}
+  .grid{display:flex;gap:10px;margin-top:16px}
+  .chip{flex:1;border:1px solid var(--border);border-radius:var(--radius-xl);padding:10px 12px;background:#fff}
+  .chip b{font-size:12px;font-weight:600;color:var(--color-matcha-deep)}
+  .chip span{display:block;font-size:10px;color:var(--fg3);margin-top:3px}
+</style></head>
+<body>
+  <p class="lab">Story green ladder · graded section backgrounds</p>
+  <div class="ladder">
+    <div style="background:#e5f0e7;color:#0b3d2e">#E5F0E7</div>
+    <div style="background:#cfe8d4;color:#0b3d2e">#CFE8D4</div>
+    <div style="background:#b8dcc4;color:#0b3d2e">#B8DCC4</div>
+    <div style="background:#9fcea8;color:#0b3d2e">#9FCEA8</div>
+  </div>
+  <div class="grid">
+    <div class="chip"><b>fg2 · 80%</b><span>body on cream</span></div>
+    <div class="chip"><b>fg3 · 60%</b><span>meta / origin</span></div>
+    <div class="chip"><b>border · 10%</b><span>hairlines</span></div>
+    <div class="chip"><b>matcha-soft</b><span>::selection</span></div>
+  </div>
+</body></html>

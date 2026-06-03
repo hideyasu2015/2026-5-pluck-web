@@ -1,0 +1,39 @@
+<!-- @dsCard group="Components" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{font-family:var(--font-sans);padding:24px 26px;display:flex;flex-direction:column;gap:16px}
+  body{background:var(--color-cream-silk)}
+  .grp{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+  .lab{font-size:9px;text-transform:uppercase;letter-spacing:.16em;color:var(--fg3);width:70px;flex-shrink:0}
+  .btn{padding:13px 26px;border-radius:9999px;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;border:1px solid transparent;transition:all .3s var(--ease-out)}
+  .primary{background:var(--color-cream-silk);color:var(--color-matcha-deep);border-color:var(--border)}
+  .primary:hover{background:var(--color-gold-champagne);color:#fff}
+  .solid{background:var(--color-matcha-deep);color:var(--color-cream-silk)}
+  .solid:hover{box-shadow:var(--shadow-lg)}
+  .outline{background:transparent;color:var(--color-matcha-deep);border-color:color-mix(in oklab,var(--color-matcha-deep) 30%,transparent)}
+  .outline:hover{background:var(--color-matcha-deep);color:var(--color-cream-silk)}
+  .ondark{background:var(--color-matcha-deep);padding:16px;border-radius:14px;display:flex;gap:14px}
+  .ghost{background:transparent;color:var(--color-cream-silk);border-color:color-mix(in oklab,var(--color-cream-silk) 50%,transparent)}
+  .ghost:hover{background:color-mix(in oklab,var(--color-cream-silk) 10%,transparent)}
+  .link{display:inline-flex;align-items:center;gap:8px;color:var(--color-matcha-deep);font-weight:600;font-size:13px}
+</style></head>
+<body>
+  <div class="grp"><span class="lab">On light</span>
+    <button class="btn primary">Explore Wholesale</button>
+    <button class="btn outline">Our Story</button>
+    <button class="btn solid">Contact</button>
+  </div>
+  <div class="grp"><span class="lab">On dark</span>
+    <div class="ondark">
+      <button class="btn primary">Let's get started</button>
+      <button class="btn ghost">Our Story</button>
+    </div>
+  </div>
+  <div class="grp"><span class="lab">Text link</span>
+    <span class="link">Explore <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+  </div>
+</body></html>

@@ -1,0 +1,31 @@
+<!-- @dsCard group="Spacing" -->
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>
+  html,body{margin:0}
+  body{background:var(--color-cream-silk);padding:24px 26px;font-family:var(--font-sans)}
+  .lab{font-size:10px;text-transform:uppercase;letter-spacing:.18em;color:var(--fg3);margin:0 0 14px}
+  .stack{display:flex;flex-direction:column;gap:0}
+  .bar{display:flex;align-items:center;gap:12px;font-size:11px;color:var(--color-charcoal-ink)}
+  .bar .fill{background:color-mix(in oklab,var(--color-matcha-soft) 22%,transparent);border-left:2px solid var(--color-matcha-soft);height:16px}
+  .bar .t{font-weight:600;width:120px}
+  .bar .v{color:var(--fg3);font-family:var(--font-mono,monospace);font-size:10px}
+  .row{display:flex;gap:8px;margin-top:8px}
+  .rule{height:1px;background:color-mix(in oklab,var(--color-gold-champagne) 50%,transparent)}
+</style></head>
+<body>
+  <p class="lab">Vertical rhythm · section padding</p>
+  <div class="stack" style="gap:9px">
+    <div class="bar"><span class="t">Section pad</span><span class="fill" style="width:280px"></span><span class="v">py-[100px]</span></div>
+    <div class="bar"><span class="t">Section lg</span><span class="fill" style="width:230px"></span><span class="v">py-32 · 8rem</span></div>
+    <div class="bar"><span class="t">Block gap</span><span class="fill" style="width:140px"></span><span class="v">gap-12 · 3rem</span></div>
+    <div class="bar"><span class="t">Card padding</span><span class="fill" style="width:92px"></span><span class="v">p-8 · 2rem</span></div>
+  </div>
+  <p class="lab" style="margin:18px 0 8px">Gold hairline separators</p>
+  <div class="row" style="align-items:center">
+    <div class="rule" style="width:48px"></div>
+    <div class="rule" style="width:64px"></div>
+    <div class="rule" style="width:80px"></div>
+    <span class="v" style="font-size:10px;color:var(--fg3)">w-12 / 16 / 20 · h-px</span>
+  </div>
+</body></html>
