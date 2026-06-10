@@ -1099,8 +1099,11 @@
 
     .form-success {
       display: none;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding: 32px 0 8px;
+      padding: 48px 0 8px;
+      gap: 4px;
     }
 
     .form-success p {
@@ -1840,61 +1843,117 @@
       <h2>Ready to Source Japanese Matcha?</h2>
       <p class="sub">Whether you're a distributor, café chain, or food manufacturer — we're open to discussion.</p>
 
-      <form class="contact-form" id="contactForm" novalidate>
+      <!-- hidden iframe — receives Google Forms response so page stays in place -->
+      <iframe name="gf_hidden" id="gf_hidden" style="display:none" aria-hidden="true"></iframe>
+
+      <form
+        class="contact-form"
+        id="contactForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSczGT8wjG64eyI41nftuJ_egyLOpUeSCFYx73nRVQQuFkJwXA/formResponse"
+        method="POST"
+        target="gf_hidden"
+        novalidate
+      >
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="f-company">Company Name <span style="color:var(--gold)">*</span></label>
-            <input class="form-input" type="text" id="f-company" name="company" placeholder="ACME Coffee Roasters"
-              required>
+            <label class="form-label" for="f-name">Your Name <span style="color:var(--gold)">*</span></label>
+            <input class="form-input" type="text" id="f-name" name="entry.452693008" placeholder="Jane Smith" required>
           </div>
           <div class="form-group">
-            <label class="form-label" for="f-name">Your Name <span style="color:var(--gold)">*</span></label>
-            <input class="form-input" type="text" id="f-name" name="name" placeholder="Jane Smith" required>
+            <label class="form-label" for="f-email">Email Address <span style="color:var(--gold)">*</span></label>
+            <input class="form-input" type="email" id="f-email" name="entry.1079146583" placeholder="jane@company.com" required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="f-email">Email Address <span style="color:var(--gold)">*</span></label>
-            <input class="form-input" type="email" id="f-email" name="email" placeholder="jane@company.com" required>
+            <label class="form-label" for="f-country">Country / Region</label>
+            <select class="form-select" id="f-country" name="entry.523120424">
+              <option value="" disabled selected>Select your country</option>
+              <option>United States</option>
+              <option>Canada</option>
+              <option>United Kingdom</option>
+              <option>Australia</option>
+              <option>India</option>
+              <option>Japan</option>
+              <option>Germany</option>
+              <option>Other</option>
+            </select>
           </div>
           <div class="form-group">
-            <label class="form-label" for="f-country">Country</label>
-            <select class="form-select" id="f-country" name="country">
-              <option value="" disabled selected>Select your country</option>
-              <option>Germany</option>
-              <option>United Kingdom</option>
-              <option>United States</option>
-              <option>France</option>
-              <option>Netherlands</option>
-              <option>Australia</option>
-              <option>Canada</option>
-              <option>UAE</option>
-              <option>Singapore</option>
-              <option>Thailand</option>
-              <option>Argentina</option>
+            <label class="form-label" for="f-biztype">Business Type</label>
+            <select class="form-select" id="f-biztype" name="entry.1724985053">
+              <option value="" disabled selected>Select business type</option>
+              <option>Manufacturer/Producer</option>
+              <option>Distributor/Wholesaler</option>
+              <option>Retailer/E-commerce</option>
+              <option>Research &amp; Development</option>
+              <option>Academic/Education</option>
+              <option>Individual/Personal Use</option>
               <option>Other</option>
             </select>
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="f-volume">Estimated Monthly Volume</label>
-          <select class="form-select" id="f-volume" name="volume">
-            <option value="" disabled selected>Select approximate volume</option>
-            <option>10–50 kg / month</option>
-            <option>50–200 kg / month</option>
-            <option>200–500 kg / month</option>
-            <option>500 kg+ / month</option>
-            <option>Not yet determined</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-product">Interested Product</label>
+            <select class="form-select" id="f-product" name="entry.2065175317">
+              <option value="" disabled selected>Select product</option>
+              <option>Matcha for Latte</option>
+              <option>Matcha for Confectionery</option>
+              <option>Ceremonial Grade Matcha</option>
+              <option>Organic Matcha</option>
+              <option>Bulk Matcha</option>
+              <option>OEM / Private Label</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-volume">Estimated Monthly Volume</label>
+            <select class="form-select" id="f-volume" name="entry.1943151567">
+              <option value="" disabled selected>Select approximate volume</option>
+              <option>Less than 500 units/month</option>
+              <option>500 - 5,000 units/month</option>
+              <option>5,001 - 20,000 units/month</option>
+              <option>More than 20,000 units/month</option>
+              <option>Project-based / Variable</option>
+            </select>
+          </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="f-message">Inquiry Details <span style="color:var(--gold)">*</span></label>
-          <textarea class="form-textarea" id="f-message" name="message"
-            placeholder="Please tell us about your matcha requirements — grade preference, certification needs, intended use (latte / bakery / retail), and any other details that would help us match you with the right SKUs."
+          <label class="form-label" for="f-purpose">Purpose of Use</label>
+          <input class="form-input" type="text" id="f-purpose" name="entry.2064081680"
+            placeholder="e.g. café latte menu, bakery ingredient, retail packaging…">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Would you like to request a sample?</label>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+            <label style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:300;cursor:pointer">
+              <input type="radio" name="entry.1641927167" value="Yes, please send a sample."
+                style="accent-color:var(--gold);width:15px;height:15px;flex-shrink:0">
+              Yes, please send a sample.
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:300;cursor:pointer">
+              <input type="radio" name="entry.1641927167" value="No, I am only requesting information at this time."
+                style="accent-color:var(--gold);width:15px;height:15px;flex-shrink:0">
+              No, I am only requesting information at this time.
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-address">Shipping Address (if requesting a sample)</label>
+          <input class="form-input" type="text" id="f-address" name="entry.1453020786"
+            placeholder="Street, City, State/Province, ZIP, Country">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-message">Message <span style="color:var(--gold)">*</span></label>
+          <textarea class="form-textarea" id="f-message" name="entry.653086408"
+            placeholder="Sample details, delivery instructions, or any specific questions…"
             required></textarea>
         </div>
 
@@ -2035,9 +2094,8 @@
       document.querySelector('.hero .reveal')?.classList.add('in');
     });
 
-    // Contact form — show success state on submit
+    // Contact form — validate, then let native POST submit to hidden iframe
     document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
       const form = e.target;
       const required = form.querySelectorAll('[required]');
       let valid = true;
@@ -2045,9 +2103,12 @@
         el.style.borderColor = '';
         if (!el.value.trim()) { el.style.borderColor = '#f87171'; valid = false; }
       });
-      if (!valid) return;
-      form.style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+      if (!valid) { e.preventDefault(); return; }
+      // Allow native submit to gf_hidden iframe, then show success
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'flex';
+      }, 400);
     });
 
     // Tab switching
