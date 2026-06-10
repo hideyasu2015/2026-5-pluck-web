@@ -2,6 +2,16 @@
 <html lang="en">
 
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BDQZX5X25E"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BDQZX5X25E');
+  </script>
+
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Global Supply — PLUCK TOKYO</title>
@@ -257,8 +267,12 @@
       bottom: 0;
       height: 1px;
       width: 0;
-      background: currentColor;
-      transition: width .3s var(--ease-out);
+      background: var(--gold);
+      transition: width .35s var(--ease-out);
+    }
+
+    .main-nav a:hover {
+      color: var(--gold);
     }
 
     .main-nav a:hover::after,
@@ -268,15 +282,38 @@
 
     .main-nav a.active {
       font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* scrolled state — dark text */
+    .hdr.scrolled .main-nav a {
+      color: var(--matcha-deep);
+    }
+
+    .hdr.scrolled .main-nav a:hover,
+    .hdr.scrolled .main-nav a.active {
+      color: var(--matcha-soft);
+    }
+
+    .hdr.scrolled .main-nav a::after {
+      background: var(--matcha-soft);
     }
 
     .nav-contact {
-      border: 1px solid color-mix(in oklab, currentColor 30%, transparent);
+      border: 1px solid color-mix(in oklab, currentColor 35%, transparent);
       border-radius: 9999px;
-      padding: 7px 17px;
-      font-size: 12px;
-      letter-spacing: .06em;
-      text-transform: none;
+      padding: 7px 18px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: background .3s var(--ease-out), color .3s var(--ease-out), border-color .3s var(--ease-out);
+    }
+
+    .nav-contact:hover {
+      background: var(--gold) !important;
+      border-color: var(--gold) !important;
+      color: #fff !important;
     }
 
     .nav-contact::after {
@@ -1072,8 +1109,11 @@
 
     .form-success {
       display: none;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding: 32px 0 8px;
+      padding: 48px 0 8px;
+      gap: 4px;
     }
 
     .form-success p {
@@ -1247,45 +1287,6 @@
 <body>
 
   <!-- ── AUTH OVERLAY ────────────────────────────────────────── -->
-  <div id="authOverlay" style="
-  position:fixed;inset:0;z-index:9999;
-  background:var(--matcha-deep);
-  display:flex;align-items:center;justify-content:center;
-  font-family:var(--font-sans);
-">
-    <div
-      style="position:absolute;inset:0;opacity:.08;mix-blend-mode:overlay;
-    background-image:url('data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'na\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.8\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23na)\'/%3E%3C/svg%3E')">
-    </div>
-    <div style="position:relative;z-index:1;width:100%;max-width:380px;padding:0 28px;text-align:center">
-      <div style="display:flex;align-items:center;justify-content:center;gap:12px;margin-bottom:40px">
-        <div
-          style="width:44px;height:44px;border-radius:9999px;background:radial-gradient(circle at 38% 32%,#2f6b4f,#0b3d2e 70%);font-family:var(--font-serif);font-size:20px;color:var(--cream-silk);display:flex;align-items:center;justify-content:center">
-          P</div>
-        <span
-          style="font-family:var(--font-serif);font-weight:500;letter-spacing:.18em;font-size:22px;color:var(--cream-silk)">PLUCK</span>
-      </div>
-      <p
-        style="font-size:10px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:28px">
-        Global Supply — Restricted Access</p>
-      <form id="authForm" style="display:flex;flex-direction:column;gap:14px" novalidate>
-        <input id="authUser" type="text" autocomplete="username" placeholder="Username"
-          style="background:color-mix(in oklab,var(--cream-silk) 7%,transparent);border:1px solid color-mix(in oklab,var(--cream-silk) 20%,transparent);border-radius:8px;padding:13px 16px;font-family:var(--font-sans);font-size:14px;font-weight:300;color:var(--cream-silk);outline:none;width:100%;transition:border-color .25s"
-          onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor=''">
-        <input id="authPass" type="password" autocomplete="current-password" placeholder="Password"
-          style="background:color-mix(in oklab,var(--cream-silk) 7%,transparent);border:1px solid color-mix(in oklab,var(--cream-silk) 20%,transparent);border-radius:8px;padding:13px 16px;font-family:var(--font-sans);font-size:14px;font-weight:300;color:var(--cream-silk);outline:none;width:100%;transition:border-color .25s"
-          onfocus="this.style.borderColor='var(--gold)'" onblur="this.style.borderColor=''">
-        <p id="authError" style="display:none;font-size:12px;color:#f87171;letter-spacing:.04em;margin-top:-4px">
-          Incorrect credentials. Please try again.</p>
-        <button type="submit"
-          style="margin-top:6px;background:var(--cream-silk);color:var(--matcha-deep);border:none;border-radius:9999px;padding:14px 30px;font-family:var(--font-sans);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;transition:background .3s,box-shadow .3s"
-          onmouseover="this.style.background='var(--gold)';this.style.color='#fff'"
-          onmouseout="this.style.background='var(--cream-silk)';this.style.color='var(--matcha-deep)'">
-          Enter
-        </button>
-      </form>
-    </div>
-  </div>
 
   <div class="grain" aria-hidden="true"></div>
   <div class="vignette" aria-hidden="true"></div>
@@ -1298,13 +1299,12 @@
         <span class="wordmark">PLUCK</span>
       </a>
       <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/story">Story</a>
-        <a href="/about">About</a>
-        <a href="/wholesale">Wholesale</a>
-        <a href="/export" class="active">Export</a>
-        <a href="/products">Products</a>
-        <a href="/contact" class="nav-contact">Contact</a>
+        <a href="#hero">Home</a>
+        <a href="#wholesale">Wholesale</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact-anchor" class="nav-contact">Contact</a>
         <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;letter-spacing:.14em;opacity:.8">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
@@ -1320,7 +1320,7 @@
   <!-- ══════════════════════════════════════════════════════════ -->
   <!-- SECTION 1: HERO                                           -->
   <!-- ══════════════════════════════════════════════════════════ -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <video class="hero-video" autoplay muted loop playsinline>
       <source src="designsystem/assets/movie/newvideo-1.mp4" type="video/mp4">
     </video>
@@ -1346,7 +1346,7 @@
   <!-- ══════════════════════════════════════════════════════════ -->
   <!-- SECTION 2: EXPORT TRACK RECORD                           -->
   <!-- ══════════════════════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section" id="wholesale">
     <div class="container">
       <div class="reach-split">
 
@@ -1437,7 +1437,7 @@
   <!-- ══════════════════════════════════════════════════════════ -->
   <!-- SECTION 3: CERTIFICATIONS & DOCUMENTATION                 -->
   <!-- ══════════════════════════════════════════════════════════ -->
-  <section class="section section-mint">
+  <section class="section section-mint" id="about">
     <div class="container">
       <div class="sec-hdr center reveal">
         <span class="eyebrow">Documentation</span>
@@ -1505,7 +1505,8 @@
       <div class="sec-hdr reveal">
         <span class="eyebrow">Products</span>
         <h2>From Latte Grade to Ceremonial —<br>We Have Your Spec</h2>
-        <p class="body">All products are sourced from named Japanese regions. Pricing is FOB Japan per kg. Contact us
+        <p class="body">All products are sourced from named Japanese regions. Pricing is FOB Japan per kg (USD). Contact
+          us
           for volume pricing and current availability.</p>
         <div class="sec-rule"></div>
       </div>
@@ -1525,7 +1526,7 @@
             <tr>
               <th>Product</th>
               <th>Origin</th>
-              <th>Price (JPY/kg)</th>
+              <th>Price (USD/kg)</th>
               <th>Monthly Cap</th>
               <th></th>
             </tr>
@@ -1534,84 +1535,84 @@
             <tr>
               <td><span class="sku">OIS-1</span></td>
               <td class="col-origin">Yame, Fukuoka</td>
-              <td class="col-price">¥16,000</td>
+              <td class="col-price">$100</td>
               <td class="col-cap">250kg <span class="col-spot">(spot: 3,000kg)</span></td>
               <td><span class="tag-hl">Best Value</span></td>
             </tr>
             <tr class="sold-out">
               <td><span class="sku">NIS-Fuku Uji <span class="sold-out-badge">Sold Out</span></span></td>
               <td class="col-origin">Uji, Kyoto</td>
-              <td class="col-price">¥18,000</td>
+              <td class="col-price">$110</td>
               <td class="col-cap">—</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">CKR-CJM</span></td>
               <td class="col-origin">Japan</td>
-              <td class="col-price">¥19,000</td>
+              <td class="col-price">$115</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">NIS-Zui</span></td>
               <td class="col-origin">Japan</td>
-              <td class="col-price">¥20,000</td>
+              <td class="col-price">$125</td>
               <td class="col-cap">50kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">UJE-K5</span></td>
               <td class="col-origin">Uji, Kyoto</td>
-              <td class="col-price">¥20,000</td>
+              <td class="col-price">$125</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">CHE-NsoB</span></td>
               <td class="col-origin">Nishio, Aichi</td>
-              <td class="col-price">¥21,000</td>
+              <td class="col-price">$130</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">SKE-LBE</span></td>
               <td class="col-origin">Shizuoka</td>
-              <td class="col-price">¥21,000</td>
+              <td class="col-price">$130</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">OIS-2</span></td>
               <td class="col-origin">Yame, Fukuoka</td>
-              <td class="col-price">¥23,000</td>
+              <td class="col-price">$140</td>
               <td class="col-cap">200kg <span class="col-spot">(spot: 2,000kg)</span></td>
               <td><span class="tag-hl">High Volume</span></td>
             </tr>
             <tr>
               <td><span class="sku">SBE-1</span></td>
               <td class="col-origin">Japan</td>
-              <td class="col-price">¥24,000</td>
+              <td class="col-price">$150</td>
               <td class="col-cap">100kg <span class="col-spot">(spot: 1,000kg)</span></td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">KOU-1</span></td>
               <td class="col-origin">Nara</td>
-              <td class="col-price">¥25,000</td>
+              <td class="col-price">$155</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">NIS-Kei</span></td>
               <td class="col-origin">Japan</td>
-              <td class="col-price">¥30,000</td>
+              <td class="col-price">$185</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">IMM-Pre A</span></td>
               <td class="col-origin">Kagoshima</td>
-              <td class="col-price">¥30,000</td>
+              <td class="col-price">$185</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
@@ -1628,7 +1629,7 @@
             <tr>
               <th>Product</th>
               <th>Origin</th>
-              <th>Price (JPY/kg)</th>
+              <th>Price (USD/kg)</th>
               <th>Monthly Cap</th>
             </tr>
           </thead>
@@ -1636,25 +1637,25 @@
             <tr>
               <td><span class="sku">KWH-1</span></td>
               <td class="col-origin">Mie</td>
-              <td class="col-price">¥35,000</td>
+              <td class="col-price">$215</td>
               <td class="col-cap">100kg</td>
             </tr>
             <tr>
               <td><span class="sku">IMM-TA</span></td>
               <td class="col-origin">Kagoshima</td>
-              <td class="col-price">¥40,000</td>
+              <td class="col-price">$250</td>
               <td class="col-cap">100kg</td>
             </tr>
             <tr>
               <td><span class="sku">NIS-Kei Uji</span></td>
               <td class="col-origin">Uji, Kyoto</td>
-              <td class="col-price">¥50,000</td>
+              <td class="col-price">$310</td>
               <td class="col-cap">100kg</td>
             </tr>
             <tr>
               <td><span class="sku">KOU-2</span></td>
               <td class="col-origin">Nara</td>
-              <td class="col-price">¥50,000</td>
+              <td class="col-price">$310</td>
               <td class="col-cap">100kg</td>
             </tr>
           </tbody>
@@ -1670,7 +1671,7 @@
             <tr>
               <th>Product</th>
               <th>Origin</th>
-              <th>Price (JPY/kg)</th>
+              <th>Price (USD/kg)</th>
               <th>Monthly Cap</th>
               <th></th>
             </tr>
@@ -1679,14 +1680,14 @@
             <tr>
               <td><span class="sku">OIS-1 Bio</span></td>
               <td class="col-origin">Japan</td>
-              <td class="col-price">¥18,000</td>
+              <td class="col-price">$110</td>
               <td class="col-cap">450kg <span class="col-spot">(spot: 5,000kg)</span></td>
               <td><span class="tag-hl">High Volume</span></td>
             </tr>
             <tr>
               <td><span class="sku">CHE-Starter Bio</span></td>
               <td class="col-origin">Kagoshima</td>
-              <td class="col-price">¥23,000</td>
+              <td class="col-price">$140</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
@@ -1700,28 +1701,28 @@
             <tr>
               <td><span class="sku">SGE-C Bio</span></td>
               <td class="col-origin">Kagoshima</td>
-              <td class="col-price">¥25,000</td>
+              <td class="col-price">$155</td>
               <td class="col-cap">100kg <span class="col-spot">(spot: 1,000kg)</span></td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">MRB-1 Bio</span></td>
               <td class="col-origin">Shizuoka</td>
-              <td class="col-price">¥27,000</td>
+              <td class="col-price">$165</td>
               <td class="col-cap">spot: 600kg only</td>
               <td><span class="tag-note">Spot Only</span></td>
             </tr>
             <tr>
               <td><span class="sku">IMM-Pre Bio</span></td>
               <td class="col-origin">Kagoshima</td>
-              <td class="col-price">¥35,000</td>
+              <td class="col-price">$215</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
             <tr>
               <td><span class="sku">CHE-KgoA Bio</span></td>
               <td class="col-origin">Kagoshima</td>
-              <td class="col-price">¥40,000</td>
+              <td class="col-price">$250</td>
               <td class="col-cap">100kg</td>
               <td></td>
             </tr>
@@ -1738,24 +1739,24 @@
             <tr>
               <th>Product</th>
               <th>Origin</th>
-              <th>Price (JPY/kg)</th>
+              <th>Price (USD/kg)</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td><span class="sku">MRF-1 Bio</span></td>
               <td class="col-origin">Shizuoka</td>
-              <td class="col-price">¥37,000</td>
+              <td class="col-price">$230</td>
             </tr>
             <tr>
               <td><span class="sku">CHE-NsoA Bio</span></td>
               <td class="col-origin">Nishio, Aichi</td>
-              <td class="col-price">¥40,000</td>
+              <td class="col-price">$250</td>
             </tr>
             <tr>
               <td><span class="sku">IMM-TA Bio</span></td>
               <td class="col-origin">Kagoshima</td>
-              <td class="col-price">¥40,000</td>
+              <td class="col-price">$250</td>
             </tr>
           </tbody>
         </table>
@@ -1814,66 +1815,117 @@
       <h2>Ready to Source Japanese Matcha?</h2>
       <p class="sub">Whether you're a distributor, café chain, or food manufacturer — we're open to discussion.</p>
 
-      <form class="contact-form" id="contactForm" novalidate>
+      <!-- hidden iframe — receives Google Forms response so page stays in place -->
+      <iframe name="gf_hidden" id="gf_hidden" style="display:none" aria-hidden="true"></iframe>
+
+      <form class="contact-form" id="contactForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSczGT8wjG64eyI41nftuJ_egyLOpUeSCFYx73nRVQQuFkJwXA/formResponse"
+        method="POST" target="gf_hidden" novalidate>
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="f-company">Company Name <span style="color:var(--gold)">*</span></label>
-            <input class="form-input" type="text" id="f-company" name="company" placeholder="ACME Coffee Roasters"
-              required>
+            <label class="form-label" for="f-name">Your Name <span style="color:var(--gold)">*</span></label>
+            <input class="form-input" type="text" id="f-name" name="entry.452693008" placeholder="Jane Smith" required>
           </div>
           <div class="form-group">
-            <label class="form-label" for="f-name">Your Name <span style="color:var(--gold)">*</span></label>
-            <input class="form-input" type="text" id="f-name" name="name" placeholder="Jane Smith" required>
+            <label class="form-label" for="f-email">Email Address <span style="color:var(--gold)">*</span></label>
+            <input class="form-input" type="email" id="f-email" name="entry.1079146583" placeholder="jane@company.com"
+              required>
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label class="form-label" for="f-email">Email Address <span style="color:var(--gold)">*</span></label>
-            <input class="form-input" type="email" id="f-email" name="email" placeholder="jane@company.com" required>
+            <label class="form-label" for="f-country">Country / Region</label>
+            <select class="form-select" id="f-country" name="entry.523120424">
+              <option value="" disabled selected>Select your country</option>
+              <option>United States</option>
+              <option>Canada</option>
+              <option>United Kingdom</option>
+              <option>Australia</option>
+              <option>India</option>
+              <option>Japan</option>
+              <option>Germany</option>
+              <option>Other</option>
+            </select>
           </div>
           <div class="form-group">
-            <label class="form-label" for="f-country">Country</label>
-            <select class="form-select" id="f-country" name="country">
-              <option value="" disabled selected>Select your country</option>
-              <option>Germany</option>
-              <option>United Kingdom</option>
-              <option>United States</option>
-              <option>France</option>
-              <option>Netherlands</option>
-              <option>Australia</option>
-              <option>Canada</option>
-              <option>UAE</option>
-              <option>Singapore</option>
-              <option>Thailand</option>
-              <option>Argentina</option>
+            <label class="form-label" for="f-biztype">Business Type</label>
+            <select class="form-select" id="f-biztype" name="entry.1724985053">
+              <option value="" disabled selected>Select business type</option>
+              <option>Manufacturer/Producer</option>
+              <option>Distributor/Wholesaler</option>
+              <option>Retailer/E-commerce</option>
+              <option>Research &amp; Development</option>
+              <option>Academic/Education</option>
+              <option>Individual/Personal Use</option>
               <option>Other</option>
             </select>
           </div>
         </div>
 
-        <div class="form-group">
-          <label class="form-label" for="f-volume">Estimated Monthly Volume</label>
-          <select class="form-select" id="f-volume" name="volume">
-            <option value="" disabled selected>Select approximate volume</option>
-            <option>10–50 kg / month</option>
-            <option>50–200 kg / month</option>
-            <option>200–500 kg / month</option>
-            <option>500 kg+ / month</option>
-            <option>Not yet determined</option>
-          </select>
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="f-product">Interested Product</label>
+            <select class="form-select" id="f-product" name="entry.2065175317">
+              <option value="" disabled selected>Select product</option>
+              <option>Matcha for Latte</option>
+              <option>Matcha for Confectionery</option>
+              <option>Ceremonial Grade Matcha</option>
+              <option>Organic Matcha</option>
+              <option>Bulk Matcha</option>
+              <option>OEM / Private Label</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="f-volume">Estimated Monthly Volume</label>
+            <select class="form-select" id="f-volume" name="entry.1943151567">
+              <option value="" disabled selected>Select approximate volume</option>
+              <option>Less than 500 units/month</option>
+              <option>500 - 5,000 units/month</option>
+              <option>5,001 - 20,000 units/month</option>
+              <option>More than 20,000 units/month</option>
+              <option>Project-based / Variable</option>
+            </select>
+          </div>
         </div>
 
         <div class="form-group">
-          <label class="form-label" for="f-message">Inquiry Details <span style="color:var(--gold)">*</span></label>
-          <textarea class="form-textarea" id="f-message" name="message"
-            placeholder="Please tell us about your matcha requirements — grade preference, certification needs, intended use (latte / bakery / retail), and any other details that would help us match you with the right SKUs."
-            required></textarea>
+          <label class="form-label" for="f-purpose">Purpose of Use</label>
+          <input class="form-input" type="text" id="f-purpose" name="entry.2064081680"
+            placeholder="e.g. café latte menu, bakery ingredient, retail packaging…">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">Would you like to request a sample?</label>
+          <div style="display:flex;flex-direction:column;gap:8px;margin-top:4px">
+            <label style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:300;cursor:pointer">
+              <input type="radio" name="entry.1641927167" value="Yes, please send a sample."
+                style="accent-color:var(--gold);width:15px;height:15px;flex-shrink:0">
+              Yes, please send a sample.
+            </label>
+            <label style="display:flex;align-items:center;gap:10px;font-size:13px;font-weight:300;cursor:pointer">
+              <input type="radio" name="entry.1641927167" value="No, I am only requesting information at this time."
+                style="accent-color:var(--gold);width:15px;height:15px;flex-shrink:0">
+              No, I am only requesting information at this time.
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-address">Shipping Address (if requesting a sample)</label>
+          <input class="form-input" type="text" id="f-address" name="entry.1453020786"
+            placeholder="Street, City, State/Province, ZIP, Country">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="f-message">Message <span style="color:var(--gold)">*</span></label>
+          <textarea class="form-textarea" id="f-message" name="entry.653086408"
+            placeholder="Sample details, delivery instructions, or any specific questions…" required></textarea>
         </div>
 
         <div class="form-submit-row">
-          <p class="form-note">First sample free · Min. order 10kg<br>Response within 2 business days</p>
+          <p class="form-note">First sample free · Min. order 10kg<br>Response within 1 week business days</p>
           <button type="submit" class="btn btn-primary">Send Inquiry &thinsp;→</button>
         </div>
 
@@ -1886,7 +1938,7 @@
           <path d="m9 12 2 2 4-4" />
         </svg>
         <p>Thank you — your inquiry has been received.</p>
-        <span>We will be in touch within 2 business days.</span>
+        <span>We will be in touch within 1 week business days.</span>
       </div>
 
     </div>
@@ -1907,31 +1959,24 @@
         <div>
           <h4>Discover</h4>
           <nav>
-            <a href="/">Home</a>
-            <a href="/story">Story</a>
-            <a href="/about">About</a>
-            <a href="/wholesale">Wholesale</a>
-            <a href="/export">Export</a>
-            <a href="/products">Products</a>
+            <a href="#hero">Home</a>
+            <a href="#wholesale">Wholesale</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#how-it-works">How It Works</a>
           </nav>
         </div>
         <div>
           <h4>Inquiries</h4>
           <div style="display:flex;flex-direction:column;gap:10px;font-weight:300;font-size:14px;opacity:.84">
-            <a href="/contact">Contact form</a>
+            <a href="#contact-anchor">Contact form</a>
             <span style="display:flex;align-items:center;gap:8px">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
-                <rect x="2" y="4" width="20" height="16" rx="2" />
-              </svg>
-              info@pluck.co.jp
+
+
+
             </span>
           </div>
-          <div style="margin-top:22px">
-            <h4>Export Inquiries</h4>
-            <div style="font-weight:300;font-size:14px;opacity:.84">endo-t@pluck.co.jp</div>
-          </div>
+
         </div>
       </div>
       <div class="footer-bottom">
@@ -1942,43 +1987,27 @@
   </footer>
 
   <script>
-    // ── BASIC AUTH ────────────────────────────────────────────────
-    (function() {
-      const overlay = document.getElementById('authOverlay');
-      const form = document.getElementById('authForm');
-      const error = document.getElementById('authError');
-
-      if (sessionStorage.getItem('pluck_auth') === '1') {
-        overlay.style.display = 'none';
-        return;
-      }
-
-      // Prevent page scroll while locked
-      document.body.style.overflow = 'hidden';
-
-      form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        const u = document.getElementById('authUser').value.trim();
-        const p = document.getElementById('authPass').value;
-        if (u === 'pluck' && p === 'tokyo') {
-          sessionStorage.setItem('pluck_auth', '1');
-          overlay.style.transition = 'opacity .6s';
-          overlay.style.opacity = '0';
-          setTimeout(() => { overlay.style.display = 'none'; }, 600);
-          document.body.style.overflow = '';
-        } else {
-          error.style.display = 'block';
-          document.getElementById('authPass').value = '';
-          document.getElementById('authPass').focus();
-        }
-      });
-    })();
-
-    // ── Header scroll
+    // ── Header scroll + active nav link on scroll
     const hdr = document.getElementById('hdr');
+    const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+    const sections = ['hero', 'wholesale', 'about', 'products', 'how-it-works', 'contact-anchor']
+      .map(id => document.getElementById(id)).filter(Boolean);
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 80;
+      let current = sections[0];
+      sections.forEach(sec => { if (scrollY >= sec.offsetTop) current = sec; });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
+      });
+    }
+
     window.addEventListener('scroll', () => {
       hdr.classList.toggle('scrolled', window.scrollY > 40);
+      updateActiveNav();
     }, { passive: true });
+
+    updateActiveNav();
 
     // Scroll reveal
     const io = new IntersectionObserver(entries => {
@@ -1993,9 +2022,8 @@
       document.querySelector('.hero .reveal')?.classList.add('in');
     });
 
-    // Contact form — show success state on submit
+    // Contact form — validate, then let native POST submit to hidden iframe
     document.getElementById('contactForm').addEventListener('submit', e => {
-      e.preventDefault();
       const form = e.target;
       const required = form.querySelectorAll('[required]');
       let valid = true;
@@ -2003,9 +2031,12 @@
         el.style.borderColor = '';
         if (!el.value.trim()) { el.style.borderColor = '#f87171'; valid = false; }
       });
-      if (!valid) return;
-      form.style.display = 'none';
-      document.getElementById('formSuccess').style.display = 'block';
+      if (!valid) { e.preventDefault(); return; }
+      // Allow native submit to gf_hidden iframe, then show success
+      setTimeout(() => {
+        form.style.display = 'none';
+        document.getElementById('formSuccess').style.display = 'flex';
+      }, 400);
     });
 
     // Tab switching
