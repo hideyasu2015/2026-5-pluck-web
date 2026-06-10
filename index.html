@@ -257,8 +257,12 @@
       bottom: 0;
       height: 1px;
       width: 0;
-      background: currentColor;
-      transition: width .3s var(--ease-out);
+      background: var(--gold);
+      transition: width .35s var(--ease-out);
+    }
+
+    .main-nav a:hover {
+      color: var(--gold);
     }
 
     .main-nav a:hover::after,
@@ -268,15 +272,38 @@
 
     .main-nav a.active {
       font-weight: 600;
+      color: var(--gold);
+    }
+
+    /* scrolled state — dark text */
+    .hdr.scrolled .main-nav a {
+      color: var(--matcha-deep);
+    }
+
+    .hdr.scrolled .main-nav a:hover,
+    .hdr.scrolled .main-nav a.active {
+      color: var(--matcha-soft);
+    }
+
+    .hdr.scrolled .main-nav a::after {
+      background: var(--matcha-soft);
     }
 
     .nav-contact {
-      border: 1px solid color-mix(in oklab, currentColor 30%, transparent);
+      border: 1px solid color-mix(in oklab, currentColor 35%, transparent);
       border-radius: 9999px;
-      padding: 7px 17px;
-      font-size: 12px;
-      letter-spacing: .06em;
-      text-transform: none;
+      padding: 7px 18px;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: background .3s var(--ease-out), color .3s var(--ease-out), border-color .3s var(--ease-out);
+    }
+
+    .nav-contact:hover {
+      background: var(--gold) !important;
+      border-color: var(--gold) !important;
+      color: #fff !important;
     }
 
     .nav-contact::after {
@@ -1298,13 +1325,12 @@
         <span class="wordmark">PLUCK</span>
       </a>
       <nav class="main-nav">
-        <a href="/">Home</a>
-        <a href="/story">Story</a>
-        <a href="/about">About</a>
-        <a href="/wholesale">Wholesale</a>
-        <a href="/export" class="active">Export</a>
-        <a href="/products">Products</a>
-        <a href="/contact" class="nav-contact">Contact</a>
+        <a href="#hero">Home</a>
+        <a href="#wholesale">Wholesale</a>
+        <a href="#about">About</a>
+        <a href="#products">Products</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact-anchor" class="nav-contact">Contact</a>
         <span style="display:inline-flex;align-items:center;gap:5px;font-size:11px;letter-spacing:.14em;opacity:.8">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
@@ -1320,7 +1346,7 @@
   <!-- ══════════════════════════════════════════════════════════ -->
   <!-- SECTION 1: HERO                                           -->
   <!-- ══════════════════════════════════════════════════════════ -->
-  <section class="hero">
+  <section class="hero" id="hero">
     <video class="hero-video" autoplay muted loop playsinline>
       <source src="designsystem/assets/movie/newvideo-1.mp4" type="video/mp4">
     </video>
@@ -1346,7 +1372,7 @@
   <!-- ══════════════════════════════════════════════════════════ -->
   <!-- SECTION 2: EXPORT TRACK RECORD                           -->
   <!-- ══════════════════════════════════════════════════════════ -->
-  <section class="section">
+  <section class="section" id="wholesale">
     <div class="container">
       <div class="reach-split">
 
@@ -1437,7 +1463,7 @@
   <!-- ══════════════════════════════════════════════════════════ -->
   <!-- SECTION 3: CERTIFICATIONS & DOCUMENTATION                 -->
   <!-- ══════════════════════════════════════════════════════════ -->
-  <section class="section section-mint">
+  <section class="section section-mint" id="about">
     <div class="container">
       <div class="sec-hdr center reveal">
         <span class="eyebrow">Documentation</span>
@@ -1974,11 +2000,27 @@
       });
     })();
 
-    // ── Header scroll
+    // ── Header scroll + active nav link on scroll
     const hdr = document.getElementById('hdr');
+    const navLinks = document.querySelectorAll('.main-nav a[href^="#"]');
+    const sections = ['hero', 'wholesale', 'about', 'products', 'how-it-works', 'contact-anchor']
+      .map(id => document.getElementById(id)).filter(Boolean);
+
+    function updateActiveNav() {
+      const scrollY = window.scrollY + 80;
+      let current = sections[0];
+      sections.forEach(sec => { if (scrollY >= sec.offsetTop) current = sec; });
+      navLinks.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
+      });
+    }
+
     window.addEventListener('scroll', () => {
       hdr.classList.toggle('scrolled', window.scrollY > 40);
+      updateActiveNav();
     }, { passive: true });
+
+    updateActiveNav();
 
     // Scroll reveal
     const io = new IntersectionObserver(entries => {
